@@ -1,3 +1,29 @@
 @tailwind base;
+
+p {
+    font-size: 18px;
+}
+
+a {
+    font-size: 10px;
+}
 @tailwind components;
 @tailwind utilities;
+
+.text-box {
+    display: inline-block;
+    border: 1px solid #788fbd;
+    color: #788fbd;
+    font-size: 10px;
+    padding: 4.5px 13px;
+    border-radius: 20px;
+}
+
+.personal-box {
+    display: inline-block;
+    background-color: #d1e9fe;
+    border-radius: 3px;
+    color: #788fbd;
+    font-size: 10px;
+    padding: 2px 5px;
+}
