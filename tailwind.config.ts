@@ -8,13 +8,28 @@ const config: Config = {
     ],
     theme: {
         extend: {
-            backgroundImage: {
-                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+            fontFamily: {
+                suit: ['var(--font-suit)'],
+                oneshinhan: ['var(--font-oneshinhan)'],
+            },
+            fontSize: {
+                sm: '10px',
+                md: '14px',
+                lg: '18px',
             },
             screens: {
                 mob: '0px',
                 pc: '600px',
+            },
+            colors: {
+                main: '#0046FF',
+                bl100: '#F5FAFF',
+                bl200: '#DDEEFF',
+                bl300: '#788FBD',
+                secondary: '#CCFF00',
+                gr100: '#F9FFE2',
+                gradientfrom: '#C8EFFF',
+                gradientto: '#C5CCFF',
             },
         },
     },
