@@ -20,6 +20,16 @@ const oneShinhan = localFont({
 export const metadata: Metadata = {
     title: '신한 파트너스',
     description: '목표를 향한 나의 첫 걸음, 신한 파트너스와 함께 해요',
+    openGraph: {
+        title: '신한 파트너스',
+        description: '목표를 향한 나의 첫 걸음, 신한 파트너스와 함께 해요',
+        siteName: 'shinhan partners',
+        locale: 'ko_KR',
+        url: 'https://shinhan-partners.vercel.app/',
+        images: {
+            url: '../../../public/logo.svg',
+        },
+    },
 };
 
 export default function RootLayout({
