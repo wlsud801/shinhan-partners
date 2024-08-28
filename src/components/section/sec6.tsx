@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '../ui/box';
 import Image from 'next/image';
-import higherGraph from '../../../public/higherGraph.png';
+import higherGraph from '../../../public/highergraph.png';
 
 function Section6() {
     return (

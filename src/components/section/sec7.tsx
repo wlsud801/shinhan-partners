@@ -1,5 +1,5 @@
 import React from 'react';
-import people from '../../../public/peopleGraph.png';
+import people from '../../../public/peoplegraph.png';
 import kneel from '../../../public/kneel.png';
 import Image from 'next/image';
 
