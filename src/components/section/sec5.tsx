@@ -1,9 +1,10 @@
+'use client';
 import React from 'react';
 import Box from '../ui/box';
 import graph from '../../../public/graph.svg';
 import Image from 'next/image';
 import Button from '../ui/button';
-import { Router, useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 function Ssection5() {
     const router = useRouter();
