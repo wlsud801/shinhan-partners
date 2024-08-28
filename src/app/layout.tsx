@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         locale: 'ko_KR',
         url: 'https://shinhan-partners.vercel.app/',
         images: {
-            url: '../../../public/logo.svg',
+            url: '../../public/logo.svg',
         },
     },
 };
