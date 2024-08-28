@@ -12,9 +12,10 @@ function Section3() {
         dots: true,
         infinite: false,
         speed: 500,
-        slidesToShow: 1.5,
+        slidesToShow: 1,
         slidesToScroll: 1,
-        draggable: true,
+        swipeToSlide: true,
+        variableWidth: true,
     };
     return (
         <div className="bg-bl100 pt-5 pb-12 mb-5">
@@ -24,12 +25,12 @@ function Section3() {
                 <Box
                     type="white"
                     content={
-                        <div className="p-5 w-64">
+                        <div className="p-5 w-[220px]">
                             <div className="flex gap-2 mb-4">
-                                <Image src={smile} alt="20대 여성 직장인" width="48" height="42" />
+                                <Image src={smile} alt="20대 여성 직장인" width={48} height={42} />
                                 <div>
                                     <p className="personal-box mb-1">20대 여성 직장인 | 김*희</p>
-                                    <p className="text-md font-extrabold text-main">추가 소득 +914,000원</p>
+                                    <p className="text-sm font-extrabold text-main">추가 소득 +914,000원</p>
                                 </div>
                             </div>
 
@@ -47,12 +48,12 @@ function Section3() {
                 <Box
                     type="white"
                     content={
-                        <div className="p-5 w-64">
+                        <div className="p-5 w-[220px]">
                             <div className="flex gap-2 mb-4">
-                                <Image src={smile} alt="20대 여성 직장인" width="48" height="42" />
+                                <Image src={smile} alt="20대 여성 직장인" width={48} height={42} />
                                 <div>
                                     <p className="personal-box mb-1">20대 여성 직장인 | 김*희</p>
-                                    <p className="text-md font-extrabold text-main">추가 소득 +914,000원</p>
+                                    <p className="text-sm font-extrabold text-main">추가 소득 +914,000원</p>
                                 </div>
                             </div>
 
@@ -70,12 +71,12 @@ function Section3() {
                 <Box
                     type="white"
                     content={
-                        <div className="p-5 w-64">
+                        <div className="p-5 w-[220px]">
                             <div className="flex gap-2 mb-4">
-                                <Image src={smile} alt="20대 여성 직장인" width="48" height="42" />
+                                <Image src={smile} alt="20대 여성 직장인" width={48} height={42} />
                                 <div>
                                     <p className="personal-box mb-1">20대 여성 직장인 | 김*희</p>
-                                    <p className="text-md font-extrabold text-main">추가 소득 +914,000원</p>
+                                    <p className="text-sm font-extrabold text-main">추가 소득 +914,000원</p>
                                 </div>
                             </div>
 

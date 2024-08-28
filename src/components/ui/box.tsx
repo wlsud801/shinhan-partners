@@ -9,7 +9,7 @@ interface BoxProps {
 function Box({ type, content, className }: BoxProps) {
     const style = {
         transparent: 'bg-wh50 rounded-lg border border-white',
-        white: 'bg-white rounded-xl border border-bl400',
+        white: 'bg-white rounded-3xl border border-bl400',
         blue: 'bg-main rounded-xl',
     };
     return <div className={`${style[type]} ${className}`}>{content}</div>;

@@ -17,7 +17,7 @@ function Section2() {
                                 <br />
                                 <span className="text-main">1시간</span>이면 되나요?
                             </p>
-                            <Image src={clock} alt="1시간 시계" className="m-auto mb-5" />
+                            <Image src={clock} alt="1시간 시계" className="m-auto mb-5" width={211} height={122} />
                             <p className="text-md font-bold mb-5">네, 물론이에요!</p>
                             <p className="text-sm text-bl300">
                                 내 보험 점검부터 계약을 체결하는 데 <br />
