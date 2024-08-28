@@ -1,5 +1,5 @@
 import React from 'react';
-import highfive from '../../../public/highfive.svg';
+import highfive from '../../../public/highfive.png';
 import Image from 'next/image';
 import Box from '../ui/box';
 

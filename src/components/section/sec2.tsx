@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '../ui/box';
 import Image from 'next/image';
-import clock from '../../../public/clock.svg';
+import clock from '../../../public/clock.png';
 
 function Section2() {
     return (

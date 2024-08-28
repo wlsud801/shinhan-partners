@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import moneyBag from '../../../public/moneybag.svg';
+import moneyBag from '../../../public/coinBag.png';
 import company from '../../../public/company.png';
 import home from '../../../public/home.png';
 import business from '../../../public/business.png';

@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '../ui/box';
-import circus from '../../../public/circus.svg';
+import circus from '../../../public/circus.png';
 import Image from 'next/image';
 
 function Section9() {
