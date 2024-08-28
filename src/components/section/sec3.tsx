@@ -17,18 +17,18 @@ function Section3() {
         draggable: true,
     };
     return (
-        <div className="bg-bl100 py-5 mb-5">
+        <div className="bg-bl100 pt-5 pb-12 mb-5">
             <p className="text-lg font-bold pb-2 text-center">유튜브 내용 작성 예정</p>
             <div className="bg-bl200 h-48 text-center mx-5">유튜브 영상</div>
             <Slider {...settings} className="mt-5 ">
                 <Box
                     type="white"
                     content={
-                        <div className="p-5">
+                        <div className="p-5 w-64">
                             <div className="flex gap-2 mb-4">
                                 <Image src={smile} alt="20대 여성 직장인" width="48" height="42" />
                                 <div>
-                                    <p className="personal-box">20대 여성 직장인 | 김*희</p>
+                                    <p className="personal-box mb-1">20대 여성 직장인 | 김*희</p>
                                     <p className="text-md font-extrabold text-main">추가 소득 +914,000원</p>
                                 </div>
                             </div>
@@ -42,16 +42,16 @@ function Section3() {
                             </p>
                         </div>
                     }
-                    className="mr-2"
+                    className="ml-5"
                 />
                 <Box
                     type="white"
                     content={
-                        <div className="p-5">
+                        <div className="p-5 w-64">
                             <div className="flex gap-2 mb-4">
                                 <Image src={smile} alt="20대 여성 직장인" width="48" height="42" />
                                 <div>
-                                    <p className="personal-box">20대 여성 직장인 | 김*희</p>
+                                    <p className="personal-box mb-1">20대 여성 직장인 | 김*희</p>
                                     <p className="text-md font-extrabold text-main">추가 소득 +914,000원</p>
                                 </div>
                             </div>
@@ -65,16 +65,16 @@ function Section3() {
                             </p>
                         </div>
                     }
-                    className="mr-2"
+                    className="ml-2"
                 />
                 <Box
                     type="white"
                     content={
-                        <div className="p-5">
+                        <div className="p-5 w-64">
                             <div className="flex gap-2 mb-4">
                                 <Image src={smile} alt="20대 여성 직장인" width="48" height="42" />
                                 <div>
-                                    <p className="personal-box">20대 여성 직장인 | 김*희</p>
+                                    <p className="personal-box mb-1">20대 여성 직장인 | 김*희</p>
                                     <p className="text-md font-extrabold text-main">추가 소득 +914,000원</p>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@ function Section3() {
                             </p>
                         </div>
                     }
-                    className=""
+                    className="ml-2 mr-5"
                 />
             </Slider>
         </div>

@@ -4,7 +4,7 @@ import googleSheet from '@/api/googleSheet';
 import axios from 'axios';
 import React, { useState } from 'react';
 
-function page() {
+function Page() {
     const [name, setName] = useState<string>('');
     const handleSubmitForm = async () => {
         try {
@@ -32,4 +32,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;
