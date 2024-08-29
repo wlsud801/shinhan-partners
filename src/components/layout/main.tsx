@@ -8,6 +8,10 @@ import Section6 from '../section/sec6';
 import Section7 from '../section/sec7';
 import Section8 from '../section/sec8';
 import Section9 from '../section/sec9';
+import Section10 from '../section/sec10';
+import Section11 from '../section/sec11';
+import Section12 from '../section/sec12';
+import Section13 from '../section/sec13';
 
 function Main() {
     return (
@@ -21,6 +25,10 @@ function Main() {
             <Section7 />
             <Section8 />
             <Section9 />
+            <Section10 />
+            <Section11 />
+            <Section12 />
+            <Section13 />
         </Fragment>
     );
 }

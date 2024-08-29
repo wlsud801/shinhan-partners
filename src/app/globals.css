@@ -7,6 +7,16 @@ p {
 a {
     font-size: 10px;
 }
+
+h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+h2 span {
+    color: #0046ff;
+}
+
 .slick-dots {
     bottom: -45px !important;
 }
@@ -49,6 +59,15 @@ a {
 .green-text-box {
     display: inline-block;
     background-color: #ccff00;
+    font-size: 10px;
+    padding: 4.5px 13px;
+    border-radius: 20px;
+}
+
+.blue-text-box {
+    display: inline-block;
+    border: 1px solid #0046ff;
+    color: #0046ff;
     font-size: 10px;
     padding: 4.5px 13px;
     border-radius: 20px;

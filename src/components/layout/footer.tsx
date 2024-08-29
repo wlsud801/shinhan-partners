@@ -3,9 +3,15 @@ import footerLogo from '../../../public/footerLogo.png';
 import Image from 'next/image';
 function Footer() {
     return (
-        <div className="bg-main px-3 py-7 flex align-middle justify-between">
+        <div className="bg-main px-3 py-7 flex items-center justify-between">
             <div className="flex gap-3">
-                <Image src={footerLogo} alt="신한 라이프 로고" width="58" height="20" />
+                <Image
+                    src={footerLogo}
+                    alt="신한 라이프 로고"
+                    width={58}
+                    height={20}
+                    style={{ objectFit: 'contain' }}
+                />
                 <p>
                     <span className="block text-white text-xs font-thin">서울특별시 강남구 테헤란로 318</span>
                     <span className="block text-white text-xs font-thin">사업자등록번호 104-81-28992</span>
