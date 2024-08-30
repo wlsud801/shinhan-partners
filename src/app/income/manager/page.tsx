@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Box from '@/components/ui/box';
 import AOS from 'aos';
 
-function page() {
+function Page() {
     useEffect(() => {
         AOS.init();
     });
@@ -114,4 +114,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

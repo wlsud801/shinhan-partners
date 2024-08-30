@@ -6,7 +6,7 @@ import React from 'react';
 import check from '../../../../public/default-check.png';
 import { useRouter } from 'next/navigation';
 
-function page() {
+function Page() {
     const router = useRouter();
     return (
         <div className="min-h-[100dvh]">
@@ -55,4 +55,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;
