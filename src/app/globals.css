@@ -17,6 +17,10 @@ h2 span {
     color: #0046ff;
 }
 
+.slick-track {
+    width: initial;
+}
+
 .slick-dots {
     bottom: -45px !important;
 }
@@ -52,7 +56,7 @@ h2 span {
     border: 1px solid #788fbd;
     color: #788fbd;
     font-size: 10px;
-    padding: 4.5px 13px;
+    padding: 3px 13px;
     border-radius: 20px;
 }
 
@@ -69,7 +73,7 @@ h2 span {
     border: 1px solid #0046ff;
     color: #0046ff;
     font-size: 10px;
-    padding: 4.5px 13px;
+    padding: 3px 13px;
     border-radius: 20px;
 }
 

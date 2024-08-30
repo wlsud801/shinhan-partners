@@ -11,8 +11,10 @@ function Section10() {
     return (
         <div className="bg-bl400 py-10">
             <div className="text-center">
-                <p className="text-box">합류 후기</p>
-                <h2 className="my-4">
+                <p className="text-box" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="400">
+                    합류 후기
+                </p>
+                <h2 className="my-4" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="400">
                     채용 및 인사관리를 통한 <br />
                     <span>매니저</span> 합류 후기
                 </h2>

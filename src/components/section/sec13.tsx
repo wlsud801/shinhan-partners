@@ -11,7 +11,7 @@ function Section13() {
             <h2>
                 <span>신한 파트너스</span>에<br /> 합류해 볼까요?
             </h2>
-            <Button type="primary" text="바로 지원하기" onClick={() => console.log('d')} className="w-3/4 my-7" />
+            <Button type="primary" text="바로 지원하기" onClick={() => console.log('d')} className="w-4/5 mt-5" />
             <Image src={join} alt="산" />
         </div>
     );

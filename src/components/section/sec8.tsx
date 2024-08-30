@@ -6,11 +6,22 @@ import Box from '../ui/box';
 function Section8() {
     return (
         <div className="bg-white py-10 text-center">
-            <p className="text-box">신한 파트너스</p>
-            <p className="font-bold my-3">
+            <p className="text-box" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="700">
+                신한 파트너스
+            </p>
+            <p className="font-bold my-3" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="750">
                 <span className="text-main">업무 파트</span>는 두 가지가 있어요!
             </p>
-            <Image src={highfive} alt="하이파이브하는 손과 신한 로고" width={311} height={160} className="m-auto" />
+            <Image
+                src={highfive}
+                alt="하이파이브하는 손과 신한 로고"
+                width={311}
+                height={160}
+                className="m-auto"
+                data-aos="fade-up"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="800"
+            />
             <div className="flex gap-2 w-full justify-center mt-7 mb-2">
                 <Box
                     type="blue"
@@ -27,6 +38,9 @@ function Section8() {
                         </div>
                     }
                     className="w-[164px]"
+                    data-aos="flip-right"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="600"
                 />
                 <Box
                     type="blue"
@@ -43,6 +57,9 @@ function Section8() {
                         </div>
                     }
                     className="w-[164px]"
+                    data-aos="flip-right"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="700"
                 />
             </div>
         </div>

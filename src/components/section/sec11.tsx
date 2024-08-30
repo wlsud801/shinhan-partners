@@ -5,7 +5,7 @@ import Box from '../ui/box';
 
 function Section11() {
     return (
-        <div className="bg-white text-center py-10">
+        <div id="education" className="bg-white text-center py-10">
             <p className="text-box mb-5">시험, 교육 합격 시</p>
             <h2>
                 <span>교육비</span> 안내

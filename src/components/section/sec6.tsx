@@ -10,8 +10,20 @@ function Section6() {
                 type="white"
                 content={
                     <div className="text-center px-5 py-7">
-                        <p className="text-box">추가 소득을 위한 쉬운 방법</p>
-                        <p className="font-bold mt-4">
+                        <p
+                            className="text-box"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="400"
+                        >
+                            추가 소득을 위한 쉬운 방법
+                        </p>
+                        <p
+                            className="font-bold mt-4"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="450"
+                        >
                             <span className="text-main">이것</span>만 따라하세요!
                         </p>
                         <Image
@@ -20,8 +32,16 @@ function Section6() {
                             className="m-auto my-2"
                             width={160}
                             height={156}
+                            data-aos="fade-up"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="450"
                         />
-                        <ol className="flex flex-col gap-4 items-center my-3 w-full">
+                        <ol
+                            className="flex flex-col gap-4 items-center my-3 w-full"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="500"
+                        >
                             <li className="flex gap-4 items-center w-[218px]">
                                 <Box
                                     type="blue"
@@ -37,7 +57,7 @@ function Section6() {
                                 <Box
                                     type="blue"
                                     content={<p className="text-white text-sm px-5 leading-7">STEP2</p>}
-                                    className="rounded-md h-7"
+                                    className="rounded-sm h-7"
                                 />
                                 <p className="text-md text-left font-bold">
                                     <span className="text-sm text-bl300 block font-normal">운전면허 취득 수준의</span>

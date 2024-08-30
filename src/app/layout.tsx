@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+
 import './globals.css';
+import 'aos/dist/aos.css';
 
 const suit = localFont({
     src: '../fonts/SUIT-Variable.woff2',

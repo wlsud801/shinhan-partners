@@ -9,7 +9,12 @@ function Section9() {
             <Box
                 type="white"
                 content={
-                    <div className="text-center py-9">
+                    <div
+                        className="text-center py-9"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-offset="500"
+                    >
                         <p className="font-bold text-md">
                             활동 중인
                             <span className="text-main"> 파트너스</span> 현황
@@ -68,13 +73,14 @@ function Section9() {
                     </div>
                 }
             />
-            <Image
-                src={circus}
-                alt="서커스 하는 사람"
-                width={218}
-                height={152}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2"
-            />
+            <div
+                className="absolute bottom-0 left-16 w-[218px] h-[152px]"
+                data-aos="fade-up"
+                data-aos-easing="ease-out-cubic"
+                data-aos-offset="400"
+            >
+                <Image src={circus} alt="서커스 하는 사람" width={218} height={152} />
+            </div>
         </div>
     );
 }
