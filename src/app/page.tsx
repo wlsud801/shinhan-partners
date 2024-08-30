@@ -1,15 +1,15 @@
 import Footer from '@/components/layout/footer';
 import Header from '@/components/layout/header';
 import Main from '@/components/layout/main';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 function page() {
     return (
-        <div>
+        <Fragment>
             <Header />
             <Main />
             <Footer />
-        </div>
+        </Fragment>
     );
 }
 

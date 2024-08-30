@@ -42,7 +42,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${suit.variable} font-suit`}>
-                <div className="pc:w-[500px] mob:w-full border mx-auto bg-bl100 overflow-x-hidden">{children}</div>
+                <main className="pc:w-[500px] mob:w-full border mx-auto bg-bl100">{children}</main>
             </body>
         </html>
     );

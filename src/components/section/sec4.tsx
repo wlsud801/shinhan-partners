@@ -11,7 +11,7 @@ import Box from '../ui/box';
 
 function Section4() {
     const settings = {
-        className: 'slider variable-width mt-5',
+        className: 'mt-5',
         dots: false,
         infinite: false,
         speed: 500,
@@ -66,23 +66,19 @@ function Section4() {
                 data-aos-duration="400"
             >
                 <Slider {...settings}>
-                    <Box
-                        type="blue"
-                        content={
-                            <div className="flex justify-between text-white px-6 py-5">
-                                <div>
-                                    <Image src={company} alt="서류가방" width={38} height={38} />
-                                    <p className="text-sm mt-2">직장인</p>
-                                </div>
-                                <p className="text-md font-semibold translate-y-11">120만원</p>
+                    <div className="w-[182px] ml-5">
+                        <div className="flex justify-between text-white px-6 py-5 w-[162px] bg-main rounded-xl">
+                            <div>
+                                <Image src={company} alt="서류가방" width={38} height={38} />
+                                <p className="text-sm mt-2">직장인</p>
                             </div>
-                        }
-                        className="ml-5 w-40"
-                    />
+                            <p className="text-md font-semibold translate-y-11">120만원</p>
+                        </div>
+                    </div>
                     <Box
                         type="blue"
                         content={
-                            <div className="flex justify-between text-white px-6 py-5">
+                            <div className="flex justify-between text-white px-6 py-5 w-[162px]">
                                 <div>
                                     <Image src={home} alt="집" width={38} height={38} />
                                     <p className="text-sm mt-2">주부</p>
@@ -90,12 +86,12 @@ function Section4() {
                                 <p className="text-md font-semibold translate-y-11">116만원</p>
                             </div>
                         }
-                        className="ml-2 w-40"
+                        className="w-[162px]"
                     />
                     <Box
                         type="blue"
                         content={
-                            <div className="flex justify-between text-white px-6 py-5">
+                            <div className="flex justify-between text-white px-6 py-5 w-[162px]">
                                 <div>
                                     <Image src={business} alt="후라이팬" width={38} height={38} />
                                     <p className="text-sm mt-2">자영업자</p>
@@ -103,12 +99,12 @@ function Section4() {
                                 <p className="text-md font-semibold translate-y-11">120만원</p>
                             </div>
                         }
-                        className="ml-2 w-40"
+                        className="w-[162px]"
                     />
                     <Box
                         type="blue"
                         content={
-                            <div className="flex justify-between text-white px-6 py-5">
+                            <div className="flex justify-between text-white px-6 py-5 w-[162px]">
                                 <div>
                                     <Image src={etc} alt="익명의 사람" width={38} height={38} />
                                     <p className="text-sm mt-2">기타</p>
@@ -116,7 +112,7 @@ function Section4() {
                                 <p className="text-md font-semibold translate-y-11">120만원</p>
                             </div>
                         }
-                        className="w-40 ml-2 mr-5"
+                        className="w-[162px]"
                     />
                 </Slider>
             </div>

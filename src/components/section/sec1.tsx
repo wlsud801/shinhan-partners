@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import AOS from 'aos';
 import pig from '../../../public/pig.png';
 import man from '../../../public/man.png';
 import Image from 'next/image';
@@ -10,10 +9,6 @@ import Link from 'next/link';
 import Slider from 'react-slick';
 
 function Section1() {
-    useEffect(() => {
-        AOS.init();
-    });
-
     const settings = {
         className: 'slider variable-width mt-5',
         dots: false,
