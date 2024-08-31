@@ -2,7 +2,7 @@ import { JWT } from 'google-auth-library';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-async function loadGoogleDoc() {
+export async function loadGoogleDoc() {
     try {
         const formattedKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
         const serviceAccountAuth = new JWT({
@@ -10,7 +10,7 @@ async function loadGoogleDoc() {
             email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
             scopes: ['https://www.googleapis.com/auth/spreadsheets'],
         });
-        const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID || '', serviceAccountAuth);
+        const doc = new GoogleSpreadsheet(process.env.GOOGLE_DOCUMENT_ID || '', serviceAccountAuth);
         await doc.loadInfo();
         return doc;
     } catch (error) {
@@ -19,6 +19,7 @@ async function loadGoogleDoc() {
 }
 
 export default async function googleSheet(req: NextApiRequest, res: NextApiResponse) {
+    console.log(req.method);
     if (req.method === 'POST') {
         try {
             const doc = await loadGoogleDoc();

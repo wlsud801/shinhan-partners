@@ -21,7 +21,7 @@ function Section1() {
         vertical: true,
     };
     return (
-        <div className="bg-gradient-to-t to-gradientfrom from-gradientto px-5 pt-12 pb-7 rounded-b-3xl">
+        <div className="bg-gradient-to-t to-gradientfrom from-gradientto px-5 pt-28 pb-7 rounded-b-3xl">
             <p
                 className="text-center font-medium"
                 data-aos="fade-up"

@@ -17,6 +17,12 @@ h2 span {
     color: #0046ff;
 }
 
+input {
+    border: 1px solid #e6e6e6;
+    width: 100%;
+    padding: 2px 5px;
+}
+
 .slick-track {
     width: initial;
 }
@@ -54,6 +60,21 @@ h2 span {
     content: '';
     transform: translate(2px, 7.5px);
     border-radius: 3px;
+}
+
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.ReactModal__Content {
+    width: 100%;
+    padding: 0 !important;
+    inset: initial !important;
+    bottom: 0 !important;
+    background-color: #0046ff !important;
+    border: initial !important;
+    border-radius: 20px 20px 0 0 !important;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 @tailwind components;

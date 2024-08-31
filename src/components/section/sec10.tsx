@@ -20,7 +20,7 @@ function Section10() {
                 </h2>
             </div>
             <div className="bg-white rounded-xl mx-7 py-5 px-6">
-                <div className="mb-8">
+                <div className="mb-8" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="450">
                     <div className="flex gap-2 items-center">
                         <Image src={person1} alt="남자 사람 아이콘" width={40} height={37} />
                         <p className="text-md font-bold">
@@ -37,7 +37,7 @@ function Section10() {
                     </p>
                 </div>
 
-                <div className="mb-8">
+                <div className="mb-8" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="400">
                     <div className="flex gap-2 items-center">
                         <Image src={person6} alt="남자 사람 아이콘" width={40} height={37} />
                         <p className="text-md font-bold">
@@ -54,7 +54,7 @@ function Section10() {
                     </p>
                 </div>
 
-                <div>
+                <div data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="400">
                     <div className="flex gap-2 items-center">
                         <Image src={person5} alt="남자 사람 아이콘" width={40} height={37} />
                         <p className="text-md font-bold">
@@ -72,13 +72,15 @@ function Section10() {
             </div>
 
             <div className="text-center mt-10">
-                <p className="text-box">합류 후기</p>
-                <h2 className="my-4">
+                <p className="text-box" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="400">
+                    합류 후기
+                </p>
+                <h2 className="my-4" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="400">
                     <span>신한 파트너스</span> 합류 후기
                 </h2>
             </div>
             <div className="bg-white rounded-xl mx-7 py-5 px-6">
-                <div className="mb-8">
+                <div className="mb-8" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="450">
                     <div className="flex gap-2 items-center">
                         <Image src={person4} alt="남자 사람 아이콘" width={40} height={37} />
                         <p className="text-md font-bold">
@@ -96,7 +98,7 @@ function Section10() {
                     </p>
                 </div>
 
-                <div className="mb-8">
+                <div className="mb-8" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="450">
                     <div className="flex gap-2 items-center">
                         <Image src={person3} alt="남자 사람 아이콘" width={40} height={37} />
                         <p className="text-md font-bold">
@@ -114,7 +116,7 @@ function Section10() {
                     </p>
                 </div>
 
-                <div>
+                <div data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="450">
                     <div className="flex gap-2 items-center">
                         <Image src={person2} alt="남자 사람 아이콘" width={40} height={37} />
                         <p className="text-md font-bold">
