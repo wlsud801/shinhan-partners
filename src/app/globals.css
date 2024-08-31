@@ -30,6 +30,8 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
 }
 
 select::-ms-expand {

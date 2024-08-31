@@ -68,7 +68,7 @@ function Page() {
                 <label htmlFor="name" className="text-md font-bold">
                     이름
                 </label>
-                <input type="text" id="name" className="mb-3" value={name} onChange={(e) => setName(e.target.value)} />
+                <input type="text" id="name" className="mb-3" value={name} onChange={(e) => setPhone(e.target.value)} />
                 <label htmlFor="phone" className="text-md font-bold">
                     휴대전화
                 </label>
@@ -86,6 +86,8 @@ function Page() {
                     <select
                         className="border border-gray w-1/2 py-1 px-3"
                         onChange={(e) => setRegion1(e.target.value as keyof typeof area)}
+                        defaultValue={'시/도 선택'}
+                        required
                     >
                         {Object.keys(area).map((region) => (
                             <option key={region} value={region}>
@@ -94,7 +96,12 @@ function Page() {
                         ))}
                     </select>
 
-                    <select className="border border-gray w-1/2 py-1 px-3" onChange={(e) => setRegion2(e.target.value)}>
+                    <select
+                        defaultValue={'구/군 선택'}
+                        className="border border-gray w-1/2 py-1 px-3"
+                        onChange={(e) => setRegion2(e.target.value)}
+                        required
+                    >
                         {region1 &&
                             area[region1].map((subRegion: any) => (
                                 <option key={subRegion} value={subRegion}>
