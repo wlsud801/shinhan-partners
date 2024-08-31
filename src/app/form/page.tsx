@@ -23,32 +23,73 @@ function Page() {
     const [age, setAge] = useState<string>('');
     const [job, setJob] = useState<string>('');
     const [income, setIncome] = useState<string>('');
+    const [error, setError] = useState(false);
 
-    console.log(open);
+    const [allChecked, setAllChecked] = useState<boolean>(false);
+    const [personalChecked, setPersonalChecked] = useState<boolean>(false);
+    const [serviceChecked, setServiceChecked] = useState<boolean>(false);
 
     const handleSubmitForm = async () => {
-        try {
-            // if (isLoading) return;
-            if (name === '') return;
-            // setIsLoading(true);
-            const response = await axios.post('/api/googleSheet', {
-                name: name,
-                // Include other data fields if needed
-            });
-            console.log(response);
+        if (
+            !name ||
+            !phone ||
+            region1 === '' ||
+            region2 === '' ||
+            objective === 'none' ||
+            availableTime === 'none' ||
+            age === 'none' ||
+            job === 'none' ||
+            income === 'none'
+        ) {
+            setError(true);
+            console.log('err');
+            return;
+        }
 
-            // if (data.ok) return message.success('사전등록이 완료되었습니다.');
-            // message.error(data.error);
-        } catch (e) {
-            console.log(e);
-            // message.error('사전등록에 실패했습니다.');
-        } finally {
-            // setIsLoading(false);
+        setError(false);
+
+        try {
+            const res = await axios.post(
+                '/api/post',
+                {
+                    body: {
+                        name: name,
+                        phone: phone,
+                        region: region1,
+                        subRegion: region2,
+                        objective: objective,
+                        available: availableTime,
+                        age: age,
+                        job: job,
+                        income: income,
+                    },
+                },
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                }
+            );
+            router.push('/');
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    const handleAllChecked = () => {
+        if (allChecked === true) {
+            setAllChecked(false);
+            setPersonalChecked(false);
+            setServiceChecked(false);
+        } else {
+            setAllChecked(true);
+            setPersonalChecked(true);
+            setServiceChecked(true);
         }
     };
 
     return (
-        <div className="bg-white h-[943px] relatve">
+        <div className="bg-white h-[943px] relative">
             <div className="bg-bl400 rounded-bl-3xl pt-4 px-5 pb-7">
                 <div className="flex justify-between items-center">
                     <Image src={title} alt="신한 파트너스 지원서" width={135} height={22} />
@@ -66,29 +107,40 @@ function Page() {
             </div>
             <div className="p-5">
                 <label htmlFor="name" className="text-md font-bold">
-                    이름
+                    이름 <span className={error && !name ? 'inline-block text-red-500 text-sm' : 'hidden'}>*필수</span>
                 </label>
-                <input type="text" id="name" className="mb-3" value={name} onChange={(e) => setPhone(e.target.value)} />
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="mb-3"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
                 <label htmlFor="phone" className="text-md font-bold">
-                    휴대전화
+                    휴대전화{' '}
+                    <span className={error && !phone ? 'inline-block text-red-500 text-sm' : 'hidden'}>*필수</span>
                 </label>
                 <input
                     type="text"
                     id="phone"
+                    name="phone"
                     className="mb-3"
-                    value={name}
+                    value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                 />
                 <label htmlFor="region1" className="text-md font-bold">
-                    지역
+                    지역{' '}
+                    <span className={error && region1 === '' ? 'inline-block text-red-500 text-sm' : 'hidden'}>
+                        *필수
+                    </span>
                 </label>
                 <div className="flex gap-2 mb-3" id="region1">
                     <select
                         className="border border-gray w-1/2 py-1 px-3"
                         onChange={(e) => setRegion1(e.target.value as keyof typeof area)}
-                        defaultValue={'시/도 선택'}
-                        required
                     >
+                        <option value="">시/도 선택</option>
                         {Object.keys(area).map((region) => (
                             <option key={region} value={region}>
                                 {region}
@@ -96,12 +148,8 @@ function Page() {
                         ))}
                     </select>
 
-                    <select
-                        defaultValue={'구/군 선택'}
-                        className="border border-gray w-1/2 py-1 px-3"
-                        onChange={(e) => setRegion2(e.target.value)}
-                        required
-                    >
+                    <select className="border border-gray w-1/2 py-1 px-3" onChange={(e) => setRegion2(e.target.value)}>
+                        <option value="">구/군 선택</option>
                         {region1 &&
                             area[region1].map((subRegion: any) => (
                                 <option key={subRegion} value={subRegion}>
@@ -111,24 +159,32 @@ function Page() {
                     </select>
                 </div>
                 <label htmlFor="objective" className="text-md font-bold">
-                    지원 분야
+                    지원 분야{' '}
+                    <span className={error && objective === '' ? 'inline-block text-red-500 text-sm' : 'hidden'}>
+                        *필수
+                    </span>
                 </label>
                 <select
                     className="border border-gray w-full py-1 px-3 mb-3"
                     onChange={(e) => setObjective(e.target.value)}
                 >
+                    <option value="">선택</option>
                     <option value={'파트너스'}>파트너스</option>
                     <option value={'매니저'}>매니저</option>
                 </select>
 
-                <label htmlFor="objective" className="text-md font-bold">
-                    상담가능시간
+                <label htmlFor="availableTime" className="text-md font-bold">
+                    상담가능시간{' '}
+                    <span className={error && availableTime === '' ? 'inline-block text-red-500 text-sm' : 'hidden'}>
+                        *필수
+                    </span>
                 </label>
                 <select
-                    id="objective"
+                    id="availableTime"
                     className="border border-gray w-full py-1 px-3 mb-3"
                     onChange={(e) => setAvailableTime(e.target.value)}
                 >
+                    <option value="">선택</option>
                     <option value="9-10">9:00~10:00</option>
                     <option value="10-11">10:00~11:00</option>
                     <option value="11-12">11:00~12:00</option>
@@ -146,13 +202,15 @@ function Page() {
                 </select>
 
                 <label htmlFor="age" className="text-md font-bold">
-                    연령대
+                    연령대{' '}
+                    <span className={error && age === '' ? 'inline-block text-red-500 text-sm' : 'hidden'}>*필수</span>
                 </label>
                 <select
                     id="age"
                     className="border border-gray w-full py-1 px-3 mb-3"
                     onChange={(e) => setAge(e.target.value)}
                 >
+                    <option value="">선택</option>
                     <option value={10}>10대</option>
                     <option value={20}>20대</option>
                     <option value={30}>30대</option>
@@ -162,51 +220,79 @@ function Page() {
                 </select>
 
                 <label htmlFor="job" className="text-md font-bold">
-                    직업
+                    직업{' '}
+                    <span className={error && job === '' ? 'inline-block text-red-500 text-sm' : 'hidden'}>*필수</span>
                 </label>
                 <select
                     id="job"
                     className="border border-gray w-full py-1 px-3 mb-3"
                     onChange={(e) => setJob(e.target.value)}
                 >
+                    <option value="">선택</option>
                     <option value={'직장인'}>직장인</option>
                     <option value={'자영업자'}>자영업자</option>
                     <option value={'주부'}>주부</option>
                     <option value={'학생'}>학생</option>
                 </select>
 
-                <label htmlFor="job" className="text-md font-bold">
-                    희망소득
+                <label htmlFor="income" className="text-md font-bold">
+                    희망소득{' '}
+                    <span className={error && income === '' ? 'inline-block text-red-500 text-sm' : 'hidden'}>
+                        *필수
+                    </span>
                 </label>
                 <select
-                    id="job"
+                    id="income"
                     className="border border-gray w-full py-1 px-3 mb-7"
-                    onChange={(e) => setJob(e.target.value)}
+                    onChange={(e) => setIncome(e.target.value)}
                 >
+                    <option value="">선택</option>
                     <option value={'100만원 미만'}>100만원 미만</option>
                     <option value={'100만원 이상'}>100만원 이상</option>
                     <option value={'200만원 이상'}>200만원 이상</option>
                     <option value={'300만원 이상'}>300만원 이상</option>
                 </select>
 
-                <input type="checkbox" id="all" className="inline-block w-5 h-5 translate-y-1 mr-2" />
-                <label htmlFor="all" className="text-md ">
+                <input
+                    type="checkbox"
+                    id="all"
+                    className="inline-block w-5 h-5 translate-y-1 mr-2"
+                    checked={allChecked}
+                    onChange={() => handleAllChecked()}
+                />
+                <label htmlFor="all" className="text-md">
                     약관에 전체 동의합니다.
                 </label>
                 <br />
-                <input type="checkbox" id="personal" className="inline-block w-5 h-5 translate-y-1 mr-2 " />
+                <input
+                    type="checkbox"
+                    id="personal"
+                    className="inline-block w-5 h-5 translate-y-1 mr-2"
+                    checked={personalChecked}
+                    onChange={() => setPersonalChecked(!personalChecked)}
+                />
                 <label htmlFor="personal" className="text-md">
                     개인정보 수집 동의 및 이용 안내 동의(필수)
                 </label>
                 <br />
-                <input type="checkbox" id="service" className="inline-block w-5 h-5 translate-y-1 mr-2" />
+                <input
+                    type="checkbox"
+                    checked={serviceChecked}
+                    id="service"
+                    className="inline-block w-5 h-5 translate-y-1 mr-2"
+                    onChange={() => setServiceChecked(!serviceChecked)}
+                />
                 <label htmlFor="service" className="text-md mb-12">
                     채용상담 서비스의 정보 수신 동의(선택)
                 </label>
 
                 <button
+                    type="submit"
                     onClick={() => handleSubmitForm()}
-                    className="bg-black text-white w-full max-w-[340px] mt-7 py-3 rounded-md"
+                    className={`${
+                        personalChecked === true ? 'bg-black' : 'bg-gray-500'
+                    }  text-white w-full max-w-[340px] mt-7 py-3 rounded-md`}
+                    disabled={personalChecked === true ? false : true}
                 >
                     신청 완료
                 </button>

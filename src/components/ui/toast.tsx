@@ -11,10 +11,6 @@ interface ToastProps {
 
 function Toast({ open, setIsOpen }: ToastProps) {
     const router = useRouter();
-    console.log(open, setIsOpen);
-    useEffect(() => {
-        console.log('zss');
-    }, [open]);
     return (
         <Modal isOpen={open} ariaHideApp={false}>
             <div className="pl-5 pr-2 pt-3 text-white flex items-center justify-between">
