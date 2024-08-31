@@ -17,7 +17,7 @@ h2 span {
     color: #0046ff;
 }
 
-input {
+input[type='text'] {
     border: 1px solid #e6e6e6;
     width: 100%;
     padding: 2px 5px;
@@ -27,15 +27,11 @@ input {
 
 select {
     /*ios대응*/
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: none; */
     background-color: #ffffff;
     border: 1px solid #e6e6e6;
-}
-
-select::-ms-expand {
-    display: none; /* 화살표 없애기 for IE10, 11*/
 }
 
 .slick-track {

@@ -48,7 +48,7 @@ function Page() {
     };
 
     return (
-        <div className="bg-white min-h-[100dvh] h-[657px] relatve">
+        <div className="bg-white h-[943px] relatve">
             <div className="bg-bl400 rounded-bl-3xl pt-4 px-5 pb-7">
                 <div className="flex justify-between items-center">
                     <Image src={title} alt="신한 파트너스 지원서" width={135} height={22} />
@@ -180,7 +180,7 @@ function Page() {
                 </label>
                 <select
                     id="job"
-                    className="border border-gray w-full py-1 px-3 mb-3"
+                    className="border border-gray w-full py-1 px-3 mb-7"
                     onChange={(e) => setJob(e.target.value)}
                 >
                     <option value={'100만원 미만'}>100만원 미만</option>
@@ -189,24 +189,24 @@ function Page() {
                     <option value={'300만원 이상'}>300만원 이상</option>
                 </select>
 
-                <input type="checkbox" id="all" className="inline-block w-3 mr-2 mb-4 mt-5" />
-                <label htmlFor="all" className="text-md">
+                <input type="checkbox" id="all" className="inline-block w-5 h-5 translate-y-1 mr-2" />
+                <label htmlFor="all" className="text-md ">
                     약관에 전체 동의합니다.
                 </label>
                 <br />
-                <input type="checkbox" id="personal" className="inline-block w-3 mr-2 mb-4" />
+                <input type="checkbox" id="personal" className="inline-block w-5 h-5 translate-y-1 mr-2 " />
                 <label htmlFor="personal" className="text-md">
                     개인정보 수집 동의 및 이용 안내 동의(필수)
                 </label>
                 <br />
-                <input type="checkbox" id="service" className="inline-block w-3 mr-2 mb-4" />
+                <input type="checkbox" id="service" className="inline-block w-5 h-5 translate-y-1 mr-2" />
                 <label htmlFor="service" className="text-md mb-12">
                     채용상담 서비스의 정보 수신 동의(선택)
                 </label>
 
                 <button
                     onClick={() => handleSubmitForm()}
-                    className="absolute left-1/2 -translate-x-1/2 bottom-5 bg-black text-white w-full max-w-[315px] py-3 rounded-md"
+                    className="bg-black text-white w-full max-w-[340px] mt-7 py-3 rounded-md"
                 >
                     신청 완료
                 </button>
