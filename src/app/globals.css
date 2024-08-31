@@ -21,6 +21,19 @@ input {
     border: 1px solid #e6e6e6;
     width: 100%;
     padding: 2px 5px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+select {
+    /*ios대응*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none; /* 화살표 없애기 for IE10, 11*/
 }
 
 .slick-track {
