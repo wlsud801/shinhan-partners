@@ -38,11 +38,11 @@ function Section6() {
                         />
                         <ol
                             className="flex flex-col gap-4 items-center my-3 w-full"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-out-cubic"
-                            data-aos-duration="500"
+                            
                         >
-                            <li className="flex gap-4 items-center w-[218px]">
+                            <li className="flex gap-4 items-center w-[218px]" data-aos="fade-in"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="500">
                                 <Box
                                     type="blue"
                                     content={<p className="text-white text-sm px-5 leading-7">STEP1</p>}
@@ -53,18 +53,22 @@ function Section6() {
                                     전문 멘토가 배정돼요
                                 </p>
                             </li>
-                            <li className="flex gap-4 items-center  justify-items-start">
+                            <li className="flex gap-4 items-center  justify-items-start" data-aos="fade-in"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="500">
                                 <Box
                                     type="blue"
                                     content={<p className="text-white text-sm px-5 leading-7">STEP2</p>}
-                                    className="rounded-sm h-7"
+                                    className="rounded-md h-7"
                                 />
                                 <p className="text-md text-left font-bold">
                                     <span className="text-sm text-bl300 block font-normal">운전면허 취득 수준의</span>
                                     가벼운 시험을 보게 돼요
                                 </p>
                             </li>
-                            <li className="flex gap-4 items-center  w-[218px]">
+                            <li className="flex gap-4 items-center  w-[218px]" data-aos="fade-in"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="500">
                                 <Box
                                     type="blue"
                                     content={<p className="text-white text-sm px-5 leading-7">STEP3</p>}

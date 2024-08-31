@@ -47,6 +47,7 @@ function Main() {
                 className={`${
                     inView === true ? 'hidden' : 'block'
                 } w-[90%] py-3 rounded-xl max-w-[523px] fixed bottom-10 left-1/2 -translate-x-1/2 z-20 bg-main text-white text-center cursor-pointer`}
+                style={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}
             >
                 바로 지원하기
             </div>

@@ -15,7 +15,7 @@ function Section1() {
         arrows: false,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
         slideToShow: 1,
         swipeToSlide: true,
         vertical: true,
@@ -30,7 +30,7 @@ function Section1() {
                 data-aos-duration="300"
             >
                 한 달 1시간 투자해서
-                <span className="block font-oneshinhan font-bold pt-3 text-xl text-main">128만원 + 교육비</span>
+                <span className="block font-oneshinhan font-extrabold pt-3 text-xl text-main">128만원 + 교육비</span>
             </p>
             <Image
                 src={pig}
@@ -46,7 +46,7 @@ function Section1() {
                 <Box
                     type="transparent"
                     content={
-                        <div className="py-4 px-5 flex justify-between items-center">
+                        <div className="py-4 px-5  flex justify-between items-center">
                             <div className="flex justify-between gap-3 items-center">
                                 <Image src={man} alt="사람 아이콘" width={56} height={56} />
                                 <p>
@@ -54,8 +54,26 @@ function Section1() {
                                     <span className="block text-md font-bold">박*훈 님</span>
                                 </p>
                             </div>
-                            <p className="bg-secondary text-xl inline-block h-8 leading-8">
-                                <span className="text-main font-bold">212</span>만원
+                            <p className="bg-secondary text-lg inline-block h-8 leading-8">
+                                <span className="text-main font-extrabold text-xl">232</span>만원
+                            </p>
+                        </div>
+                    }
+                    className="my-1 mr-1"
+                />
+                <Box
+                    type="transparent"
+                    content={
+                        <div className="py-4 px-4 flex justify-between items-center">
+                            <div className="flex justify-between gap-3 items-center">
+                                <Image src={man} alt="사람 아이콘" width={56} height={56} />
+                                <p>
+                                    <span className="block text-sm text-bl300">신한파트너스 6기</span>
+                                    <span className="block text-md font-bold">박*훈 님</span>
+                                </p>
+                            </div>
+                            <p className="bg-secondary text-lg inline-block h-8 leading-8">
+                                <span className="text-main font-extrabold text-xl">212</span>만원
                             </p>
                         </div>
                     }
@@ -72,26 +90,8 @@ function Section1() {
                                     <span className="block text-md font-bold">박*훈 님</span>
                                 </p>
                             </div>
-                            <p className="bg-secondary text-xl inline-block h-8 leading-8">
-                                <span className="text-main font-bold">212</span>만원
-                            </p>
-                        </div>
-                    }
-                    className="my-1"
-                />
-                <Box
-                    type="transparent"
-                    content={
-                        <div className="py-4 px-5 flex justify-between items-center">
-                            <div className="flex justify-between gap-3 items-center">
-                                <Image src={man} alt="사람 아이콘" width={56} height={56} />
-                                <p>
-                                    <span className="block text-sm text-bl300">신한파트너스 6기</span>
-                                    <span className="block text-md font-bold">박*훈 님</span>
-                                </p>
-                            </div>
-                            <p className="bg-secondary text-xl inline-block h-8 leading-8">
-                                <span className="text-main font-bold">212</span>만원
+                            <p className="bg-secondary text-lg inline-block h-8 leading-8">
+                                <span className="text-main font-extrabold text-xl">212</span>만원
                             </p>
                         </div>
                     }

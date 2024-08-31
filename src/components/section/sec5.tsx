@@ -37,12 +37,12 @@ function Section5() {
                             />
                             <div
                                 className="w-[70px] h-[132px] bg-bl200 absolute bottom-0 left-[60px] rounded-t-xl"
-                                data-aos-duration="300"
+                                data-aos-duration="500"
                                 data-aos="zoom-in-up"
                             >
                                 <p
                                     className="h-full leading-[132px] text-sm text-bl300"
-                                    data-aos-duration="200"
+                                    data-aos-duration="300"
                                     data-aos="fadeIn"
                                 >
                                     50만원
@@ -60,7 +60,7 @@ function Section5() {
                             />
                             <div
                                 className="w-[70px] h-[78px] bg-gradient-to-t to-main from-[#96FFF4] absolute bottom-0 right-[60px] rounded-t-xl"
-                                data-aos-duration="300"
+                                data-aos-duration="500"
                                 data-aos="zoom-in-up"
                             >
                                 <p
