@@ -41,7 +41,7 @@ function Page() {
     return (
         <div className="bg-bl400 min-h-[100dvh] relative">
             <BackHeader />
-            <div className="text-center w-3/4 min-w-[285px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+            <div className="text-center w-3/4 min-w-[285px] absolute left-1/2 -translate-x-1/2">
                 <p
                     className="blue-bg-text-box"
                     data-aos="fade-up"

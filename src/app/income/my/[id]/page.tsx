@@ -9,8 +9,11 @@ import AOS from 'aos';
 
 function Page() {
     useEffect(() => {
-        AOS.init();
-    });
+        AOS.init({
+            once: true,
+            startEvent: 'DOMContentLoaded',
+        });
+    }, []);
 
     const params = useParams();
     const id = params.id;
@@ -33,7 +36,7 @@ function Page() {
     return (
         <div className="bg-bl400 min-h-[100dvh] relative">
             <BackHeader />
-            <div className="text-center w-3/4 min-w-[285px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+            <div className="text-center w-3/4 min-w-[285px] absolute left-1/2 -translate-x-1/2">
                 <p
                     className="blue-bg-text-box"
                     data-aos="fade-up"
@@ -79,7 +82,6 @@ function Page() {
                 >
                     * 가입 조건에 따라 예상 소득 금액이 달라질 수 있어요
                 </p>
-
                 <div
                     className="border border-white rounded-lg overflow-hidden w-full m-auto"
                     data-aos="fade-up"
