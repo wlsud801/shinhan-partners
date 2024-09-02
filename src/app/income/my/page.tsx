@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 function Page() {
     const router = useRouter();
     return (
-        <div className="min-h-[100dvh]">
+        <div className="min-h-[100dvh] bg-white">
             <BackHeader />
             <h2 className="p-10">
                 지금 가입되어 있는

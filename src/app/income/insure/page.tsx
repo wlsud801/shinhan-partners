@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 function Page() {
     const router = useRouter();
     return (
-        <div className="min-h-[100dvh]">
+        <div className="bg-white min-h-[100dvh]">
             <BackHeader />
             <h2 className="p-10">
                 신한 파트너스가 된다면

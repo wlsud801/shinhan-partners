@@ -13,19 +13,19 @@ function Section2() {
                         <div className="text-center py-8">
                             <p
                                 className="text-box mb-3"
-                                data-aos="fade-up"
-                                data-aos-easing="ease-out-cubic"
-                                data-aos-anchor-placement="center-bottom"
-                                data-aos-duration="300"
+                                // data-aos="fade-up"
+                                // data-aos-easing="ease-out-cubic"
+                                // data-aos-anchor-placement="center-bottom"
+                                // data-aos-duration="300"
                             >
                                 신한 파트너스
                             </p>
                             <p
                                 className="mb-3 font-bold"
-                                data-aos="fade-up"
-                                data-aos-easing="ease-out-cubic"
-                                data-aos-anchor-placement="center-bottom"
-                                data-aos-duration="350"
+                                // data-aos="fade-up"
+                                // data-aos-easing="ease-out-cubic"
+                                // data-aos-anchor-placement="center-bottom"
+                                // data-aos-duration="350"
                             >
                                 정말 한 달에
                                 <br />

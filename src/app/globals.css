@@ -83,9 +83,12 @@ select {
 
 .ReactModal__Content {
     width: 100%;
+    max-width: 500px;
     padding: 0 !important;
     inset: initial !important;
     bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     background-color: #0046ff !important;
     border: initial !important;
     border-radius: 20px 20px 0 0 !important;

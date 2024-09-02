@@ -16,13 +16,16 @@ function Section12() {
                     <div className="p-7 text-center">
                         <p
                             className="green-text-box"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-out-cubic"
-                            data-aos-offset="200"
+                            // data-aos="fade-up"
+                            // data-aos-easing="ease-out-cubic"
+                            // data-aos-offset="200"
                         >
                             HOT
                         </p>
-                        <h2 className="mt-3" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="300">
+                        <h2
+                            className="mt-3"
+                            // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="300"
+                        >
                             <span>하루 30분</span>만 공부해도
                             <br />
                             충분히 합격할 수 있어요!
@@ -35,7 +38,7 @@ function Section12() {
                             className="m-auto my-4"
                             data-aos="fade-up"
                             data-aos-easing="ease-out-cubic"
-                            data-aos-offset="450"
+                            data-aos-offset="200"
                         />
                         <Button
                             type="green"
@@ -43,7 +46,8 @@ function Section12() {
                             onClick={() => router.push('/form')}
                             data-aos="fade-up"
                             data-aos-easing="ease-out-cubic"
-                            data-aos-offset="450"
+                            data-aos-offset="300"
+                            className="font-bold text-md"
                         />
                     </div>
                 }

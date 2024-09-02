@@ -5,11 +5,16 @@ import Box from '../ui/box';
 
 function Section11() {
     return (
-        <div id="education" className="bg-white text-center py-10">
-            <p className="text-box mb-5" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="300">
+        <div id="education" className="bg-white text-center py-16">
+            <p
+                className="text-box mb-5"
+                // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="300"
+            >
                 시험, 교육 합격 시
             </p>
-            <h2 data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="350">
+            <h2
+            // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="350"
+            >
                 <span>교육비</span> 안내
             </h2>
             <Image
@@ -36,14 +41,14 @@ function Section11() {
                     className="absolute left-1/2 -ml-[170px]"
                     data-aos="flip-right"
                     data-aos-easing="ease-out-cubic"
-                    data-aos-duration="600"
+                    data-aos-duration="700"
                 />
 
                 <div
                     className="bg-white rounded-full absolute left-1/2 -ml-[22px] top-4 text-md p-3 z-10"
                     data-aos="flip-right"
                     data-aos-easing="ease-out-cubic"
-                    data-aos-duration="600"
+                    data-aos-duration="700"
                 >
                     택 1
                 </div>
@@ -60,7 +65,7 @@ function Section11() {
                     className="absolute right-1/2 -mr-[160px]"
                     data-aos="flip-right"
                     data-aos-easing="ease-out-cubic"
-                    data-aos-duration="600"
+                    data-aos-duration="700"
                 />
             </div>
             <p

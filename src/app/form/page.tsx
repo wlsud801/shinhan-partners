@@ -70,7 +70,7 @@ function Page() {
                     },
                 }
             );
-            router.push('/');
+            router.push('/form/done');
         } catch (error) {
             console.log(error);
         }

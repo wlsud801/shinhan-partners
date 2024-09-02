@@ -20,9 +20,9 @@ function Section5() {
                         <p className="green-text-box">HOT</p>
                         <p
                             className="font-bold mt-4"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-out-cubic"
-                            data-aos-duration="300"
+                            // data-aos="fade-up"
+                            // data-aos-easing="ease-out-cubic"
+                            // data-aos-duration="300"
                         >
                             가장 많이 절감하신 분은 <br />
                             <span className="text-main">보험료 43%</span>를 아꼈어요
@@ -75,21 +75,23 @@ function Section5() {
 
                         <p
                             className="text-md font-bold"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-out-cubic"
-                            data-aos-duration="400"
+                            // data-aos="fade-up"
+                            // data-aos-easing="ease-out-cubic"
+                            // data-aos-duration="400"
                         >
                             보험료 절약과 동시에 소득도 챙겼어요
                         </p>
                         <p
                             className="text-sm mt-1 mb-5 text-bl300"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-out-cubic"
-                            data-aos-duration="400"
+                            // data-aos="fade-up"
+                            // data-aos-easing="ease-out-cubic"
+                            // data-aos-duration="400"
                         >
                             나의 예상 소득을 확인할 수 있어요!
                         </p>
-                        <div data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="400">
+                        <div
+                        // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="400"
+                        >
                             <Button type="primary" text="예상 소득 계산해보기" onClick={() => router.push('/income')} />
                         </div>
                     </div>
