@@ -50,7 +50,7 @@ function Page() {
 
         try {
             const res = await axios.post(
-                '/api/post',
+                '/api/googleSheet',
                 {
                     body: {
                         name: name,
@@ -58,7 +58,7 @@ function Page() {
                         region: region1,
                         subRegion: region2,
                         objective: objective,
-                        available: availableTime,
+                        availableTime: availableTime,
                         age: age,
                         job: job,
                         income: income,
@@ -291,7 +291,7 @@ function Page() {
                     onClick={() => handleSubmitForm()}
                     className={`${
                         personalChecked === true ? 'bg-black' : 'bg-gray-500'
-                    }  text-white w-full max-w-[340px] mt-7 py-3 rounded-md`}
+                    }  text-white w-full max-w-[460px] mx-auto mt-7 py-3 rounded-md`}
                     disabled={personalChecked === true ? false : true}
                 >
                     신청 완료
