@@ -90,7 +90,7 @@ function Section4() {
                                     <Image src={business} alt="후라이팬" width={38} height={38} />
                                     <p className="text-sm mt-2">자영업자</p>
                                 </div>
-                                <p className="text-md font-semibold translate-y-11">120만원</p>
+                                <p className="text-md font-semibold translate-y-11">210만원</p>
                             </div>
                         }
                         className="w-[162px]"

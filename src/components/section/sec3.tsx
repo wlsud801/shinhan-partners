@@ -183,7 +183,7 @@ function Section3() {
                                     <Image src={emoji6} alt="20대 여성 직장인" width={48} height={42} />
                                     <div>
                                         <p className="personal-box mb-1">홍*섭 20대 후반 | 매니저</p>
-                                        <p className="text-sm font-extrabold text-main">추가소득 + 16,305,40원</p>
+                                        <p className="text-sm font-extrabold text-main">추가소득 + 1,630,540원</p>
                                     </div>
                                 </div>
 
