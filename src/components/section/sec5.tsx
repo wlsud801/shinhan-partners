@@ -18,15 +18,10 @@ function Section5() {
                 content={
                     <div className="text-center px-5 py-7">
                         <p className="green-text-box">HOT</p>
-                        <p
-                            className="font-bold mt-4"
-                            // data-aos="fade-up"
-                            // data-aos-easing="ease-out-cubic"
-                            // data-aos-duration="300"
-                        >
+                        <h2 className="font-bold mt-4">
                             가장 많이 절감하신 분은 <br />
                             <span className="text-main">보험료 43%</span>를 아꼈어요
-                        </p>
+                        </h2>
                         <div className="relative w-[100%] h-[134px] my-4 overflow-hidden">
                             <Image
                                 src={bgLine}

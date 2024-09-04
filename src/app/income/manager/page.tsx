@@ -56,21 +56,19 @@ function Page() {
                         type="blue"
                         content={
                             <div className="text-sm">
-                                <p className="text-md font-normal w-[30vw] max-w-[160px] py-4 px-6 text-white">
+                                <p className="text-[14px] font-normal w-[30vw] max-w-[170px] py-4 px-6 text-white">
                                     1명 채용 시 <br />
-                                    100만원
+                                    <span className="text-[20px] font-bold">100만원</span>
                                 </p>
                             </div>
                         }
-                        className="absolute left-[5%]"
+                        className="absolute left-[8%]"
                         data-aos="flip-right"
                         data-aos-anchor-placement="center-bottom"
                         data-aos-duration="450"
                     />
-
-                    {/* Centered "매월" Element */}
                     <div
-                        className="bg-white rounded-full text-md p-3 z-10"
+                        className="bg-secondary rounded-full text-md py-3 px-[10px] z-10 border-2 border-main"
                         data-aos="flip-right"
                         data-aos-anchor-placement="center-bottom"
                         data-aos-duration="450"
@@ -82,13 +80,13 @@ function Page() {
                         type="blue"
                         content={
                             <div className="text-sm">
-                                <p className="text-md font-normal w-[30vw] max-w-[160px] py-4 px-6 text-white">
+                                <p className="text-[14px] font-normal w-[30vw] max-w-[170px] py-4 px-6 text-white">
                                     2명 채용 시<br />
-                                    300만원
+                                    <span className="text-[20px] font-bold">300만원</span>
                                 </p>
                             </div>
                         }
-                        className="absolute right-[5%]"
+                        className="absolute right-[8%]"
                         data-aos="flip-right"
                         data-aos-anchor-placement="center-bottom"
                         data-aos-duration="450"
@@ -104,8 +102,10 @@ function Page() {
                     <p className="text-sm bg-white py-1">추가혜택</p>
                     <div className="flex items-center justify-center px-3 py-3 gap-3 bg-[rgba(255,255,255,0.2)]">
                         <p className="text-sm font-bold">
-                            <span className="text-main">나의 팀원들의 실적</span>에 따라
-                            <span className="text-main">인센티브</span>도 받을 수 있어요!(평생)
+                            <span className="text-main">나의 팀원들을 육성</span>해서
+                            <br />
+                            <span className="text-main">육성 관리 수당</span>도 매 월 받을 수 있어요!
+                            <br /> (기간 제한X)
                         </p>
                     </div>
                 </div>

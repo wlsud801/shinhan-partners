@@ -10,35 +10,23 @@ function Section6() {
                 type="white"
                 content={
                     <div className="text-center px-5 py-7">
-                        <p
-                            className="text-box"
-                            // data-aos="fade-up"
-                            // data-aos-easing="ease-out-cubic"
-                            // data-aos-duration="400"
-                        >
-                            추가 소득을 위한 쉬운 방법
-                        </p>
-                        <p
-                            className="font-bold mt-4"
-                            // data-aos="fade-up"
-                            // data-aos-easing="ease-out-cubic"
-                            // data-aos-duration="450"
-                        >
+                        <p className="text-box">추가 소득을 위한 쉬운 방법</p>
+                        <h2 className="font-bold mt-4">
                             <span className="text-main">이것</span>만 따라하세요!
-                        </p>
+                        </h2>
                         <Image
                             src={higherGraph}
                             alt="보험료 절감 그래프"
                             className="m-auto my-2"
-                            width={160}
-                            height={156}
+                            width={180}
+                            height={176}
                             data-aos="fade-up"
                             data-aos-easing="ease-out-cubic"
                             data-aos-duration="500"
                         />
                         <ol className="flex flex-col gap-4 items-center my-3 w-full">
                             <li
-                                className="flex gap-4 items-center w-[218px]"
+                                className="flex gap-4 items-center w-[240px]"
                                 data-aos="fade-in"
                                 data-aos-easing="ease-out-cubic"
                                 data-aos-duration="500"
@@ -54,7 +42,7 @@ function Section6() {
                                 </p>
                             </li>
                             <li
-                                className="flex gap-4 items-center  justify-items-start"
+                                className="flex gap-4 items-center justify-items-start"
                                 data-aos="fade-in"
                                 data-aos-easing="ease-out-cubic"
                                 data-aos-duration="550"
@@ -70,7 +58,7 @@ function Section6() {
                                 </p>
                             </li>
                             <li
-                                className="flex gap-4 items-center  w-[218px]"
+                                className="flex gap-4 items-center w-[240px]"
                                 data-aos="fade-in"
                                 data-aos-easing="ease-out-cubic"
                                 data-aos-duration="600"

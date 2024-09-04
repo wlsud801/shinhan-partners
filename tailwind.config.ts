@@ -14,10 +14,10 @@ const config: Config = {
             },
             fontSize: {
                 xs: '6px',
-                sm: '10px',
-                md: '14px',
-                lg: '18px',
-                xl: '26px',
+                sm: '12px',
+                md: '16px',
+                lg: '20px',
+                xl: '28px',
             },
             screens: {
                 mob: '0px',

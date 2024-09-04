@@ -14,18 +14,8 @@ function Section12() {
                 type="green"
                 content={
                     <div className="p-7 text-center">
-                        <p
-                            className="green-text-box"
-                            // data-aos="fade-up"
-                            // data-aos-easing="ease-out-cubic"
-                            // data-aos-offset="200"
-                        >
-                            HOT
-                        </p>
-                        <h2
-                            className="mt-3"
-                            // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="300"
-                        >
+                        <p className="green-text-box">HOT</p>
+                        <h2 className="mt-3">
                             <span>하루 30분</span>만 공부해도
                             <br />
                             충분히 합격할 수 있어요!

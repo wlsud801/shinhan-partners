@@ -14,15 +14,15 @@ function Toast({ open, setIsOpen }: ToastProps) {
     return (
         <Modal isOpen={open} ariaHideApp={false}>
             <div className="w-full max-w-[500px]">
-                <div className="pl-5 pr-2 pt-3 text-white flex items-center justify-between">
+                <div className="pl-7 pr-2 pt-3 text-white flex items-center justify-between">
                     <p className="font-normal">
                         추가소득 <br />
                         <span className="text-xl text-main bg-secondary font-bold">158만원의 기회</span> <br />
                         <span className="text-xl">놓치실 건가요?</span>
                     </p>
-                    <Image src={pig} alt="코인 돼지저금통" width={170} height={145} className="-translate-y-5" />
+                    <Image src={pig} alt="코인 돼지저금통" width={180} height={155} className="-translate-y-5" />
                 </div>
-                <div className="px-3 pb-4">
+                <div className="px-6 pb-4">
                     <button
                         onClick={() => setIsOpen(false)}
                         className="bg-black rounded-xl text-center py-3 text-md text-white w-full"

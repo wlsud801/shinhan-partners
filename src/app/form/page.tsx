@@ -286,6 +286,12 @@ function Page() {
                     채용상담 서비스의 정보 수신 동의(선택)
                 </label>
 
+                <div className="border border-main py-2 text-center text-sm mt-5 mb-3">
+                    보험영업상 보험설계사를 모집하는 것으로
+                    <br />
+                    정규 또는 비정규직 채용과는 무관함
+                </div>
+
                 <button
                     type="submit"
                     onClick={() => handleSubmitForm()}

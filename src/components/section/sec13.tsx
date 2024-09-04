@@ -22,7 +22,7 @@ const Section13 = forwardRef<HTMLDivElement, {}>(function Section13(props, ref) 
             </h2>
             <div
                 onClick={() => router.push('/form')}
-                className={`w-[90%] py-3 rounded-xl max-w-[523px] mx-auto bg-black mt-4 text-white text-center cursor-pointer`}
+                className={`w-[90%] py-4 rounded-xl max-w-[423px] mx-auto bg-black mt-4 text-white text-center cursor-pointer`}
                 data-aos="fade-in"
                 data-aos-easing="ease-out-cubic"
                 data-aos-offset="100"

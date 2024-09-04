@@ -8,7 +8,6 @@ function page() {
         <Fragment>
             <Header />
             <Main />
-            <Footer />
         </Fragment>
     );
 }

@@ -6,15 +6,8 @@ import Box from '../ui/box';
 function Section11() {
     return (
         <div id="education" className="bg-white text-center py-16">
-            <p
-                className="text-box mb-5"
-                // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="300"
-            >
-                시험, 교육 합격 시
-            </p>
-            <h2
-            // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="350"
-            >
+            <p className="text-box mb-5">시험, 교육 합격 시</p>
+            <h2>
                 <span>교육비</span> 안내
             </h2>
             <Image
@@ -32,13 +25,13 @@ function Section11() {
                     type="blue"
                     content={
                         <div className="text-sm">
-                            <p className="text-md font-normal min-w-[150px] py-4 px-6 text-white">
+                            <p className="text-sm font-normal min-w-[150px] py-4 px-6 text-white">
                                 교육비 + 활동 지원비 <br />
-                                450만원
+                                <span className="text-md">450만원</span>
                             </p>
                         </div>
                     }
-                    className="absolute left-1/2 -ml-[170px]"
+                    className="absolute left-1/2 -ml-[155px]"
                     data-aos="flip-right"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
@@ -56,9 +49,9 @@ function Section11() {
                     type="blue"
                     content={
                         <div className="text-sm">
-                            <p className="text-md font-normal min-w-[150px] py-4 px-6 text-white">
+                            <p className="text-sm font-normal min-w-[150px] py-4 px-6 text-white">
                                 Only 교육비 <br />
-                                150만원
+                                <span className="text-md">150만원</span>
                             </p>
                         </div>
                     }

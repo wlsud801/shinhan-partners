@@ -9,8 +9,8 @@ a {
 }
 
 h2 {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 800;
 }
 
 h2 span {
@@ -48,6 +48,7 @@ select {
 
 .slick-slide {
     margin: 0 5px;
+    display: inline-block;
 }
 
 .slick-dots {
@@ -102,7 +103,7 @@ select {
     display: inline-block;
     border: 1px solid #788fbd;
     color: #788fbd;
-    font-size: 10px;
+    font-size: 12px;
     padding: 3px 13px;
     border-radius: 20px;
 }
@@ -110,7 +111,7 @@ select {
 .green-text-box {
     display: inline-block;
     background-color: #ccff00;
-    font-size: 10px;
+    font-size: 12px;
     padding: 4.5px 13px;
     border-radius: 20px;
 }
@@ -119,7 +120,7 @@ select {
     display: inline-block;
     border: 1px solid #0046ff;
     color: #0046ff;
-    font-size: 10px;
+    font-size: 12px;
     padding: 3px 13px;
     border-radius: 20px;
 }

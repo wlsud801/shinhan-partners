@@ -30,15 +30,9 @@ function Section4() {
             >
                 신한 파트너스
             </p>
-            <p
-                className="font-bold"
-                // data-aos="fade-up"
-                // data-aos-easing="ease-out-cubic"
-                // data-aos-anchor-placement="center-bottom"
-                // data-aos-duration="250"
-            >
+            <h2>
                 <span className="text-main">평균소득</span>이 얼마인가요?
-            </p>
+            </h2>
             <Image
                 src={moneyBag}
                 alt="동전과 주머니"

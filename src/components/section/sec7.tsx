@@ -5,21 +5,13 @@ import Image from 'next/image';
 
 function Section7() {
     return (
-        <div className="bg-white py-10 text-center">
-            <p
-                className="text-box"
-                // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="600"
-            >
-                신한 파트너스
-            </p>
-            <p
-                className="font-bold my-3"
-                // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="600"
-            >
+        <div className="bg-white py-10 px-12 text-center">
+            <p className="text-box">신한 파트너스</p>
+            <p className="font-bold my-3">
                 <span className="text-main">누구나</span> 할 수 있나요?
             </p>
             <div data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="700">
-                <Image src={people} alt="그래프 위의 사람들" width={226} height={170} className="m-auto" />
+                <Image src={people} alt="그래프 위의 사람들" width={236} height={180} className="m-auto" />
             </div>
             <p
                 className="font-bold text-md my-6"
@@ -31,7 +23,7 @@ function Section7() {
                 누구든지 시작할 수 있어요
             </p>
             <div
-                className="border border-gray-100 rounded-xl overflow-hidden w-[221px] m-auto"
+                className="border border-gray-100 rounded-xl overflow-hidden w-full m-auto"
                 data-aos="fade-up"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="800"
