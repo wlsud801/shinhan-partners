@@ -18,7 +18,7 @@ function Section5() {
                 content={
                     <div className="text-center px-5 py-7">
                         <p className="green-text-box">HOT</p>
-                        <h2 className="font-bold mt-4">
+                        <h2 className="mt-4">
                             가장 많이 절감하신 분은 <br />
                             <span className="text-main">보험료 43%</span>를 아꼈어요
                         </h2>

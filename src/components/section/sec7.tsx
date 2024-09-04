@@ -7,7 +7,7 @@ function Section7() {
     return (
         <div className="bg-white py-10 px-12 text-center">
             <p className="text-box">신한 파트너스</p>
-            <p className="font-bold my-3">
+            <p className="my-3">
                 <span className="text-main">누구나</span> 할 수 있나요?
             </p>
             <div data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="700">

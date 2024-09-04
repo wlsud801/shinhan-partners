@@ -19,6 +19,11 @@ const config: Config = {
                 lg: '20px',
                 xl: '28px',
             },
+            fontWeight: {
+                normal: '400',
+                bold: '700',
+                extraBold: '900',
+            },
             screens: {
                 mob: '0px',
                 pc: '600px',

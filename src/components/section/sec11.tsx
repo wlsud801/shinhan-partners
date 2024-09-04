@@ -27,7 +27,7 @@ function Section11() {
                         <div className="text-sm">
                             <p className="text-sm font-normal min-w-[150px] py-4 px-6 text-white">
                                 교육비 + 활동 지원비 <br />
-                                <span className="text-md">450만원</span>
+                                <span className="text-md font-bold">450만원</span>
                             </p>
                         </div>
                     }
@@ -51,7 +51,7 @@ function Section11() {
                         <div className="text-sm">
                             <p className="text-sm font-normal min-w-[150px] py-4 px-6 text-white">
                                 Only 교육비 <br />
-                                <span className="text-md">150만원</span>
+                                <span className="text-md font-bold">150만원</span>
                             </p>
                         </div>
                     }

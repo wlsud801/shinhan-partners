@@ -9,15 +9,8 @@ const Section13 = forwardRef<HTMLDivElement, {}>(function Section13(props, ref) 
     const router = useRouter();
     return (
         <div ref={ref} className="bg-gradient-to-t to-[#F5FAFF] from-[#C6CEFF] pt-12 text-center">
-            <p
-                className="blue-text-box my-4"
-                // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="300"
-            >
-                목표를 향한 나의 첫 걸음
-            </p>
-            <h2
-            // data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-offset="350"
-            >
+            <p className="blue-text-box my-4">목표를 향한 나의 첫 걸음</p>
+            <h2>
                 <span>신한 파트너스</span>에<br /> 합류해 볼까요?
             </h2>
             <div

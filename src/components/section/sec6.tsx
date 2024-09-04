@@ -11,7 +11,7 @@ function Section6() {
                 content={
                     <div className="text-center px-5 py-7">
                         <p className="text-box">추가 소득을 위한 쉬운 방법</p>
-                        <h2 className="font-bold mt-4">
+                        <h2 className="mt-4">
                             <span className="text-main">이것</span>만 따라하세요!
                         </h2>
                         <Image
