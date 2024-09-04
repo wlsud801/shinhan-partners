@@ -65,11 +65,11 @@ function Page() {
                         <p className="text-sm bg-white py-1">추가혜택</p>
                         <div className="flex items-center justify-center px-3 py-3 gap-3 bg-[rgba(255,255,255,0.2)]">
                             <p className="text-sm font-bold">
-                                <span className="text-main">파트너스 활동 실적</span>에 따라
+                                <span className="text-main">파트너스 활동 실적</span>에 따라{' '}
                                 <span className="text-main">시상</span>도 얻을 수 있어요!
                             </p>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>

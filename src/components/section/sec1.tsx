@@ -137,8 +137,12 @@ function Section1() {
                     className="my-1"
                 />
             </Slider>
-            <Link href="#education" title="교육비 알아보기 >" className="block font-medium text-center my-7">
-                교육비 알아보기 {'>'}
+            <Link
+                href="#education"
+                title="교육비 알아보기 >"
+                className="block text-[14px] underline font-medium text-center my-7"
+            >
+                교육비는 얼마를 받을 수 있나요? {'>'}
             </Link>
         </div>
     );

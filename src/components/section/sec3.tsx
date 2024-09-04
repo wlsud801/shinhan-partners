@@ -71,9 +71,13 @@ function Section3() {
                             </div>
 
                             <p className="text-sm">
-                                평범한 회사원으로 5시부터 8시까지 매일 하루에 3시간으로 월 평균 100만원 소득이
-                                올라갔어요~ 요즘 잡체인지까지 고민을 하고 있어요!! 과연 나도 할 수 있을까 생각했는데...
-                                멘토멘티로 너무 친절하게 잘 알려주셨습니다!! 감사드려요!!
+                                평범한 회사원으로 5시부터 8시까지
+                                <br /> 매일 하루에 3시간으로
+                                <br /> 월 평균 100만원 소득이 올라갔어요~
+                                <br /> 요즘 잡체인지까지 고민을 하고 있어요!!
+                                <br /> 과연 나도 할 수 있을까 생각했는데... 멘토멘티로 너무 친절하게 잘 알려주셨습니다!!
+                                <br />
+                                감사드려요!!
                             </p>
                         </div>
                     </div>
@@ -85,7 +89,7 @@ function Section3() {
                                 <div className="flex gap-2 mb-4">
                                     <Image src={emoji2} alt="20대 여성 직장인" width={48} height={42} />
                                     <div>
-                                        <p className="personal-box mb-1">강*우 30대 초반 무직 / 매니저 </p>
+                                        <p className="personal-box mb-1">강*우 30대 초반 무직 | 매니저 </p>
                                         <p className="text-sm font-extrabold text-main">추가소득 + 3,010,000원</p>
                                     </div>
                                 </div>
@@ -106,16 +110,23 @@ function Section3() {
                                 <div className="flex gap-2 mb-4">
                                     <Image src={emoji3} alt="20대 여성 직장인" width={48} height={42} />
                                     <div>
-                                        <p className="personal-box mb-1">김*주 40대 초반 주부 / 파트너스</p>
+                                        <p className="personal-box mb-1">김*주 40대 초반 주부 | 파트너스</p>
                                         <p className="text-sm font-extrabold text-main">추가소득 +763,000원</p>
                                     </div>
                                 </div>
 
                                 <p className="text-sm">
-                                    출산을 하고 어느 회사도 저를 받아주지 않았습니다. 육아를 하면서도 월수입 100~200만원
-                                    이상 소득을 올릴 수 있었고 내가 나의 스케쥴을 조정하면서 주도적인 삶을 살고 하는
-                                    만큼 벌수 있는 신한파트너스 너무 너무 좋아요!! 경력 단절된 제가 신한이라는
-                                    대기업에서 일할 수 있어서 너무 좋아요~ 애사심이 뿜뿜!!
+                                    출산을 하고 어느 회사도 저를 받아주지 않았습니다.
+                                    <br />
+                                    그런데 신한 파트너스에서는 육아를 하면서도 <br />
+                                    월수입 100~200만원 이상 소득을 올릴 수 있었고 <br />
+                                    내가 나의 스케쥴을 조정하면서 <br />
+                                    주도적인 삶을 살고 하는 만큼 벌수 있는
+                                    <br />
+                                    신한파트너스 너무 너무 좋아요!! <br />
+                                    경력 단절된 제가 신한이라는 대기업에서 <br />
+                                    일할 수 있어서 너무 좋아요~ <br />
+                                    애사심이 뿜뿜!!
                                 </p>
                             </div>
                         }
@@ -128,16 +139,18 @@ function Section3() {
                                 <div className="flex gap-2 mb-4">
                                     <Image src={emoji4} alt="20대 여성 직장인" width={48} height={42} />
                                     <div>
-                                        <p className="personal-box mb-1">최*근 20대 초반 학생 / 파트너스</p>
+                                        <p className="personal-box mb-1">최*근 20대 초반 학생 | 파트너스</p>
                                         <p className="text-sm font-extrabold text-main">추가소득 +1,803,000원</p>
                                     </div>
                                 </div>
 
                                 <p className="text-sm">
-                                    교육을 듣고 알려주시는 대로 따라 해서 보험료도 절감하고 방학때 가족끼리 좋은
-                                    시간보내고 왔어요 부모님이 너무 행복해 하셨어요.
-                                    <br /> 대학 동기한테 자랑했더니 자기도 하고 싶다고 해서 알려줬더니 바로 해보더라구요
-                                    우리 가족 보험을 내가 점검하니 누구보다 우리 가족에 딱맞게 설계할 수 있었어요!!
+                                    교육을 듣고 알려주시는 대로 따라 해서
+                                    <br /> 보험료도 절감하고 방학때 가족끼리 좋은 시간보내고 왔어요.
+                                    <br /> 부모님이 너무 행복해 하셨고, 대학 동기한테 자랑했더니 자기도 하고 싶다고
+                                    하네요~ <br />
+                                    우리 가족 보험을 내가 점검하니
+                                    <br /> 누구보다 우리 가족에 딱맞게 설계할 수 있었어요!!
                                 </p>
                             </div>
                         }
@@ -150,16 +163,19 @@ function Section3() {
                                 <div className="flex gap-2 mb-4">
                                     <Image src={emoji5} alt="20대 여성 직장인" width={48} height={42} />
                                     <div>
-                                        <p className="personal-box mb-1">김*태 30대 중반 / 매니저</p>
+                                        <p className="personal-box mb-1">김*태 30대 중반 | 매니저</p>
                                         <p className="text-sm font-extrabold text-main">추가소득 +1,110,300원</p>
                                     </div>
                                 </div>
 
                                 <p className="text-sm">
-                                    5년 정말 어둡고 미래가 보이지 않던 고시생활을 정리하고 월급 300만원을 넘기기
-                                    힘들었는데 신한 매니저로 입사하게 되어 현재 월 수령액이 2배 이상 수령중이라 너무
-                                    풍족한 삶을 누리고 있습니다. <br />
-                                    일단해보자는 마인드로 새로운 삶을 살고 있습니다. 신한 최고!!
+                                    5년 정말 어둡고 미래가 보이지 않던
+                                    <br /> 고시생활을 정리하고 월급 300만원을 넘기기 힘들었는데
+                                    <br /> 신한 매니저로 입사하게 되어
+                                    <br /> 현재 월 수령액이 2배 이상 수령중이라
+                                    <br /> 너무 풍족한 삶을 누리고 있습니다. <br />
+                                    일단해보자는 마인드로 새로운 삶을 살고 있습니다. <br />
+                                    신한 최고!!
                                 </p>
                             </div>
                         }
@@ -172,16 +188,19 @@ function Section3() {
                                 <div className="flex gap-2 mb-4">
                                     <Image src={emoji6} alt="20대 여성 직장인" width={48} height={42} />
                                     <div>
-                                        <p className="personal-box mb-1">홍*섭 20대 후반 / 매니저</p>
+                                        <p className="personal-box mb-1">홍*섭 20대 후반 | 매니저</p>
                                         <p className="text-sm font-extrabold text-main">추가소득 + 16,305,40원</p>
                                     </div>
                                 </div>
 
                                 <p className="text-sm">
-                                    10년 동안 영업인으로 살아왔지만 매월 불안정한 소득으로 미래가 불투명 했는데 신한
-                                    매니저로 입사 후 안정적인 월 소득으로 인생을 설계해 나가고 있습니다. <br />
-                                    안정감이 주는 행복 너무 좋습니다 짱짱!! 안정감이 주는 행복 너무 좋습니다 팀원이
-                                    꾸준히 늘어감에 따라 보람, 직업만족가 수직 상승하고 있어요!! 최고 짱짱!!
+                                    10년 동안 영업인으로 살아왔지만
+                                    <br /> 매월 불안정한 소득으로 미래가 불투명 했는데
+                                    <br /> 신한 매니저로 입사 후 안정적인 월 소득으로
+                                    <br /> 인생을 설계해 나가고 있습니다. <br />
+                                    안정감이 주는 행복 너무 좋습니다 <br />
+                                    팀원이 꾸준히 늘어감에 따라 <br />
+                                    보람, 직업만족도가 수직 상승하고 있어요!! 최고 짱짱!!
                                 </p>
                             </div>
                         }

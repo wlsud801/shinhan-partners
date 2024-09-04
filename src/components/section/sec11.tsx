@@ -38,7 +38,7 @@ function Section11() {
                 />
 
                 <div
-                    className="bg-white rounded-full absolute left-1/2 -ml-[22px] top-4 text-md p-3 z-10"
+                    className="bg-white rounded-full absolute left-1/2 -ml-[22px] top-4 text-md font-bold p-3 z-10"
                     data-aos="flip-right"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"

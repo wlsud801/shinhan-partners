@@ -130,7 +130,7 @@ function Page() {
                     onChange={(e) => setPhone(e.target.value)}
                 />
                 <label htmlFor="region1" className="text-md font-bold">
-                    지역{' '}
+                    현재 거주지{' '}
                     <span className={error && region1 === '' ? 'inline-block text-red-500 text-sm' : 'hidden'}>
                         *필수
                     </span>

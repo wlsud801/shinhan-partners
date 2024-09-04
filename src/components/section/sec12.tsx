@@ -28,7 +28,7 @@ function Section12() {
                             className="m-auto my-4"
                             data-aos="fade-up"
                             data-aos-easing="ease-out-cubic"
-                            data-aos-offset="200"
+                            data-aos-duration="300"
                         />
                         <Button
                             type="green"
@@ -36,7 +36,7 @@ function Section12() {
                             onClick={() => router.push('/form')}
                             data-aos="fade-up"
                             data-aos-easing="ease-out-cubic"
-                            data-aos-offset="300"
+                            data-aos-duration="350"
                             className="font-bold text-md"
                         />
                     </div>
