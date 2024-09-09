@@ -18,7 +18,7 @@ function Section11() {
                 className="m-auto my-5"
                 data-aos="fade-up"
                 data-aos-easing="ease-out-cubic"
-                data-aos-offset="300"
+                data-aos-duration="300"
             />
             <div className="relative h-20 w-full">
                 <Box

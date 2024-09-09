@@ -9,6 +9,7 @@ import note from '../../../public/note.png';
 import { area } from '@/constant/region';
 import { useRouter } from 'next/navigation';
 import Toast from '@/components/ui/toast';
+import Link from 'next/link';
 
 function Page() {
     const router = useRouter();
@@ -89,7 +90,7 @@ function Page() {
     };
 
     return (
-        <div className="bg-white h-[943px] relative">
+        <div className="bg-white relative">
             <div className="bg-bl400 rounded-bl-3xl pt-4 px-5 pb-7">
                 <div className="flex justify-between items-center">
                     <Image src={title} alt="신한 파트너스 지원서" width={135} height={22} />
@@ -253,38 +254,23 @@ function Page() {
                     <option value={'300만원 이상'}>300만원 이상</option>
                 </select>
 
-                <input
-                    type="checkbox"
-                    id="all"
-                    className="inline-block w-5 h-5 translate-y-1 mr-2"
-                    checked={allChecked}
-                    onChange={() => handleAllChecked()}
-                />
-                <label htmlFor="all" className="text-md">
-                    약관에 전체 동의합니다.
-                </label>
-                <br />
-                <input
-                    type="checkbox"
-                    id="personal"
-                    className="inline-block w-5 h-5 translate-y-1 mr-2"
-                    checked={personalChecked}
-                    onChange={() => setPersonalChecked(!personalChecked)}
-                />
-                <label htmlFor="personal" className="text-md">
-                    개인정보 수집 동의 및 이용 안내 동의(필수)
-                </label>
-                <br />
-                <input
-                    type="checkbox"
-                    checked={serviceChecked}
-                    id="service"
-                    className="inline-block w-5 h-5 translate-y-1 mr-2"
-                    onChange={() => setServiceChecked(!serviceChecked)}
-                />
-                <label htmlFor="service" className="text-md mb-12">
-                    채용상담 서비스의 정보 수신 동의(선택)
-                </label>
+                <div className="flex items-center justify-between">
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="personal"
+                            className="inline-block w-5 h-5 translate-y-1 mr-2"
+                            checked={personalChecked}
+                            onChange={() => setPersonalChecked(!personalChecked)}
+                        />
+                        <label htmlFor="personal" className="text-md">
+                            개인정보 수집 동의 및 이용 안내 동의(필수)
+                        </label>
+                    </div>
+                    <Link href={'/form/perm'} title="약관보기" className="text-md px-3">
+                        {'>'}
+                    </Link>
+                </div>
 
                 <div className="border border-main py-2 text-center text-sm mt-5 mb-3">
                     보험영업상 보험설계사를 모집하는 것으로
