@@ -44,7 +44,7 @@ input[type='checkbox'] + #personalCheck {
     width: 15px;
     height: 15px;
     background-size: cover;
-    background-image: url('../../../shinhan-partners/public/check-off.png');
+    background-image: url('../../public/check-off.png');
     margin-right: 5px;
     transform: translateY(3px);
 }
@@ -54,7 +54,7 @@ input[type='checkbox']:checked + #personalCheck {
     width: 15px;
     height: 15px;
     background-size: cover;
-    background-image: url('../../../shinhan-partners/public/check-on.png');
+    background-image: url('../../public/check-on.png');
 }
 
 input[type='button']#personalCheck {
@@ -62,7 +62,7 @@ input[type='button']#personalCheck {
     width: 15px;
     height: 12px;
     background-size: contain;
-    background-image: url('../../../shinhan-partners/public/check.png');
+    background-image: url('../../public/check.png');
     margin-right: 7px;
     transform: translateY(7px);
 }
