@@ -10,10 +10,12 @@ import { area } from '@/constant/region';
 import { useRouter } from 'next/navigation';
 import Toast from '@/components/ui/toast';
 import Link from 'next/link';
+import PermModal from '@/components/ui/modal';
 
 function Page() {
     const router = useRouter();
     const [open, setIsOpen] = useState<boolean>(false);
+    const [modalOpen, setModalOpen] = useState<boolean>(false);
 
     const [name, setName] = useState<string>('');
     const [phone, setPhone] = useState<string>('');
@@ -263,16 +265,17 @@ function Page() {
                             checked={personalChecked}
                             onChange={() => setPersonalChecked(!personalChecked)}
                         />
-                        <label htmlFor="personal" className="text-md">
-                            개인정보 수집 동의 및 이용 안내 동의(필수)
+                        <label htmlFor="personal" id="personalCheck" />
+                        <label htmlFor="personal" className="text-sm">
+                            개인정보 수집 동의 및 이용 안내 동의 <span className="text-main">(필수)</span>
                         </label>
                     </div>
-                    <Link href={'/form/perm'} title="약관보기" className="text-md px-3">
+                    <button className="text-sm px-3 translate-y-[2px]" onClick={() => setModalOpen(true)}>
                         {'>'}
-                    </Link>
+                    </button>
                 </div>
 
-                <div className="border border-main py-2 text-center text-sm mt-5 mb-3">
+                <div className="border border-main rounded-md py-2 text-center text-sm mt-5 mb-3">
                     보험영업상 보험설계사를 모집하는 것으로
                     <br />
                     정규 또는 비정규직 채용과는 무관함
@@ -290,6 +293,12 @@ function Page() {
                 </button>
             </div>
             <Toast open={open} setIsOpen={setIsOpen} />
+            <PermModal
+                open={modalOpen}
+                setIsOpen={setModalOpen}
+                personalChecked={personalChecked}
+                setPersonalChecked={setPersonalChecked}
+            />
         </div>
     );
 }
