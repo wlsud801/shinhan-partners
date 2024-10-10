@@ -5,8 +5,9 @@ import { NextRequest, NextResponse } from 'next/server';
 export const loadGoogleDoc = async () => {
     try {
         const formattedKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+        console.log(formattedKey);
         if (!formattedKey) {
-            throw new Error('Google private key is missing or improperly formatted.');
+            throw new Error(formattedKey);
         }
 
         if (!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL) {
