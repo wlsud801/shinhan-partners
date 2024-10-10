@@ -5,20 +5,33 @@ import { NextRequest, NextResponse } from 'next/server';
 export const loadGoogleDoc = async () => {
     try {
         const formattedKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+        if (!formattedKey) {
+            throw new Error('Google private key is missing or improperly formatted.');
+        }
+
+        if (!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL) {
+            throw new Error('Google service account email is missing.');
+        }
+
+        if (!process.env.GOOGLE_DOCUMENT_ID) {
+            throw new Error('Google document ID is missing.');
+        }
+
         const serviceAccountAuth = new JWT({
             key: formattedKey,
             email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-            scopes: [
-                'https://www.googleapis.com/auth/spreadsheets',
-                'https://www.googleapis.com/auth/drive',
-                'https://www.googleapis.com/auth/drive.file',
-            ],
+            scopes: ['https://www.googleapis.com/auth/spreadsheets'],
         });
+
+        // GoogleSpreadsheet 인스턴스를 생성합니다.
         const doc = new GoogleSpreadsheet(process.env.GOOGLE_DOCUMENT_ID || '', serviceAccountAuth);
+
+        // 문서 정보를 불러오는 단계에서 오류 발생 가능성을 확인합니다.
         await doc.loadInfo();
         return doc;
-    } catch (error) {
-        console.log(error);
+    } catch (error: any) {
+        console.error('Error in loadGoogleDoc:', error.message);
+        throw error; // 에러가 발생하면 상위 함수로 전달
     }
 };
 
@@ -27,7 +40,7 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
     if (req.method === 'POST') {
         try {
             const doc = await loadGoogleDoc();
-            if (doc === undefined) return NextResponse.json({ ok: false, error: '등록에 실패하였습니다.', sub: doc });
+            if (!doc) return NextResponse.json({ ok: false, error: '등록에 실패하였습니다.', sub: doc });
             let sheet = doc?.sheetsByTitle['신한파트너스'];
             if (!sheet) {
                 sheet = await doc?.addSheet({
@@ -69,7 +82,7 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
                 job: content.body.job,
                 income: content.body.income,
             });
-            return NextResponse.json({ ok: true, message: res.body });
+            return NextResponse.json({ ok: true });
         } catch (error: any) {
             console.log(error);
             return NextResponse.json({ error: error.message });
