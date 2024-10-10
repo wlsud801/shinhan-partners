@@ -20,12 +20,12 @@ export const loadGoogleDoc = async () => {
 
         const serviceAccountAuth = new JWT({
             key: formattedKey,
-            email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+            email: process.env.NEXT_PUBLIC_GOOGLE_SERVICE_ACCOUNT_EMAIL,
             scopes: ['https://www.googleapis.com/auth/spreadsheets'],
         });
 
         // GoogleSpreadsheet 인스턴스를 생성합니다.
-        const doc = new GoogleSpreadsheet(process.env.GOOGLE_DOCUMENT_ID || '', serviceAccountAuth);
+        const doc = new GoogleSpreadsheet(process.env.NEXT_PUBLIC_GOOGLE_DOCUMENT_ID || '', serviceAccountAuth);
 
         // 문서 정보를 불러오는 단계에서 오류 발생 가능성을 확인합니다.
         await doc.loadInfo();
