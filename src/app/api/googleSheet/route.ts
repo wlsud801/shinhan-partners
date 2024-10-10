@@ -2,13 +2,17 @@ import { JWT } from 'google-auth-library';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function loadGoogleDoc() {
+export const loadGoogleDoc = async () => {
     try {
         const formattedKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
         const serviceAccountAuth = new JWT({
             key: formattedKey,
             email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-            scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+            scopes: [
+                'https://www.googleapis.com/auth/spreadsheets',
+                'https://www.googleapis.com/auth/drive',
+                'https://www.googleapis.com/auth/drive.file',
+            ],
         });
         const doc = new GoogleSpreadsheet(process.env.GOOGLE_DOCUMENT_ID || '', serviceAccountAuth);
         await doc.loadInfo();
@@ -16,23 +20,14 @@ export async function loadGoogleDoc() {
     } catch (error) {
         console.log(error);
     }
-}
+};
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export const POST = async (req: NextRequest, res: NextResponse) => {
     const content = await req.json();
     if (req.method === 'POST') {
         try {
-            // const doc = await loadGoogleDoc();
-            const formattedKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
-            const serviceAccountAuth = new JWT({
-                key: formattedKey,
-                email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-                scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-            });
-            const doc = new GoogleSpreadsheet(process.env.GOOGLE_DOCUMENT_ID || '', serviceAccountAuth);
-            await doc.loadInfo();
-
-            if (!doc) return NextResponse.json({ ok: false, error: res });
+            const doc = await loadGoogleDoc();
+            if (doc === undefined) return NextResponse.json({ ok: false, error: '등록에 실패하였습니다.', sub: doc });
             let sheet = doc?.sheetsByTitle['신한파트너스'];
             if (!sheet) {
                 sheet = await doc?.addSheet({
@@ -75,9 +70,9 @@ export async function POST(req: NextRequest, res: NextResponse) {
                 income: content.body.income,
             });
             return NextResponse.json({ ok: true, message: res.body });
-        } catch (error) {
+        } catch (error: any) {
             console.log(error);
-            return NextResponse.json({ error: 'Internal server error' });
+            return NextResponse.json({ error: error.message });
         }
     }
-}
+};
