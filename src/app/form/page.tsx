@@ -31,7 +31,6 @@ function Page() {
     const [allChecked, setAllChecked] = useState<boolean>(false);
     const [personalChecked, setPersonalChecked] = useState<boolean>(false);
     const [serviceChecked, setServiceChecked] = useState<boolean>(false);
-    console.log(process.env.GOOGLE_PRIVATE_KEY);
     const handleSubmitForm = async () => {
         if (
             !name ||
