@@ -13,8 +13,6 @@ export async function loadGoogleDoc() {
         });
         const doc = new GoogleSpreadsheet(process.env.GOOGLE_DOCUMENT_ID || '', serviceAccountAuth);
         await doc.loadInfo();
-
-        console.log('💖', doc);
         return doc;
     } catch (error) {
         console.log(error);
@@ -23,12 +21,11 @@ export async function loadGoogleDoc() {
 
 export async function POST(req: NextRequest, res: NextResponse) {
     const content = await req.json();
-    console.log(content);
     if (req.method === 'POST') {
         try {
             const doc = await loadGoogleDoc();
             console.log(doc);
-            if (!doc) return NextResponse.json({ ok: false, error: '등록에 실패했습니다.' });
+            if (!doc) return NextResponse.json({ ok: false, error: res });
             let sheet = doc.sheetsByTitle['신한파트너스'];
             if (!sheet) {
                 sheet = await doc.addSheet({
