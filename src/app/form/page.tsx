@@ -17,6 +17,15 @@ function Page() {
     const [open, setIsOpen] = useState<boolean>(false);
     const [modalOpen, setModalOpen] = useState<boolean>(false);
 
+    const year = new Date().getFullYear();
+    const month = new Date().getMonth();
+    const date = new Date().getDate();
+    const hour = new Date().getHours();
+    const minutes = new Date().getMinutes();
+    const seconds = new Date().getSeconds();
+
+    const applyTime = year + '/' + month + '/' + date + ' ' + hour + ':' + minutes + ':' + seconds;
+
     const [name, setName] = useState<string>('');
     const [phone, setPhone] = useState<string>('');
     const [region1, setRegion1] = useState<keyof typeof area | ''>('');
@@ -55,6 +64,7 @@ function Page() {
                 '/api/post',
                 {
                     body: {
+                        date: applyTime,
                         name: name,
                         phone: phone,
                         region: region1,
@@ -213,7 +223,6 @@ function Page() {
                     onChange={(e) => setAge(e.target.value)}
                 >
                     <option value="">선택</option>
-                    <option value={10}>10대</option>
                     <option value={20}>20대</option>
                     <option value={30}>30대</option>
                     <option value={40}>40대</option>
@@ -235,6 +244,7 @@ function Page() {
                     <option value={'자영업자'}>자영업자</option>
                     <option value={'주부'}>주부</option>
                     <option value={'학생'}>학생</option>
+                    <option value={'무직'}>무직</option>
                 </select>
 
                 <label htmlFor="income" className="text-md font-bold">
