@@ -25,10 +25,10 @@ export async function POST(req: NextRequest, res: NextResponse) {
         try {
             const doc = await loadGoogleDoc();
             console.log(doc);
-            if (!doc) return NextResponse.json({ ok: false, error: res });
-            let sheet = doc.sheetsByTitle['신한파트너스'];
+            // if (!doc) return NextResponse.json({ ok: false, error: res });
+            let sheet = doc?.sheetsByTitle['신한파트너스'];
             if (!sheet) {
-                sheet = await doc.addSheet({
+                sheet = await doc?.addSheet({
                     headerValues: [
                         'createdAt',
                         'name',
@@ -44,8 +44,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
                     title: '신한파트너스',
                 });
             }
-            const rows = await sheet.getRows();
-            const isRegistered = rows.some((row) => row.get('phone') === content.body.phone);
+            const rows = await sheet?.getRows();
+            const isRegistered = rows?.some((row) => row.get('phone') === content.body.phone);
             if (isRegistered) {
                 return NextResponse.json({ ok: false, error: '이미 등록된 연락처입니다.' });
             }
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
             const utc = now.getTime() + now.getTimezoneOffset() * 60 * 1000;
             const koreaTimeDiff = 9 * 60 * 60 * 1000;
 
-            await sheet.addRow({
+            await sheet?.addRow({
                 email: content.body.email,
                 createdAt: new Date(utc + koreaTimeDiff).toLocaleString(),
                 name: content.body.name,
