@@ -52,7 +52,7 @@ function Page() {
         setError(false);
 
         try {
-            const res = await axios.post(
+            await axios.post(
                 '/api/googleSheet',
                 {
                     body: {
