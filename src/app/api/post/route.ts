@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectDB } from '../../utils/database';
 import { NextApiRequest, NextApiResponse } from 'next';
-import config from '../../../../tailwind.config';
 
 export async function POST(req: Request, res: NextApiResponse) {
     const content = await req.json();
