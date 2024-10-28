@@ -52,14 +52,14 @@ function Section3() {
                 data-aos-duration="350"
             >
                 <iframe
-                    width={'100%'}
-                    height={'100%'}
+                    width="100%"
+                    height="100%"
                     src="https://www.youtube.com/embed/esBQhXy796o"
-                    title='신한 파트너스 &amp; 매니저 "야 너두 할 수 있어"'
-                    frameborder="0"
+                    title="신한 파트너스 & 매니저 '야 너두 할 수 있어'"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    style={{ border: 'none' }}
                 ></iframe>
             </div>
             <div
