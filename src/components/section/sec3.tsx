@@ -72,15 +72,6 @@ function Section3() {
     };
     return (
         <div className="bg-bl100 pt-5 pb-12 mb-5">
-            <p
-                className="text-lg font-bold pb-2 text-center"
-                data-aos="fade-up"
-                data-aos-easing="ease-out-cubic"
-                data-aos-anchor-placement="center-bottom"
-                data-aos-duration="300"
-            >
-                유튜브 내용 작성 예정
-            </p>
             <div
                 className="relative w-[calc(100%-40px)] px-4 pb-[177.78%] bg-bl200 mx-5"
                 data-aos="fade-up"

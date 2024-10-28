@@ -49,10 +49,10 @@ function Main() {
                 onClick={() => router.push('/form')}
                 className={`${
                     inView === true ? 'hidden' : 'block'
-                } w-[90%] py-3 rounded-xl max-w-[460px] text-extrabold fixed bottom-10 left-1/2 -translate-x-1/2 z-20 bg-main text-white text-center cursor-pointer`}
+                } w-[90%] py-3 rounded-xl max-w-[460px] text-bold fixed bottom-10 left-1/2 -translate-x-1/2 z-20 bg-main text-white text-center cursor-pointer`}
                 style={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}
             >
-                바로 지원하기
+                <b>바로 지원하기</b>
             </div>
             <Link href={'#top'} className="fixed bottom-24 pc:left-1/2 pc:translate-x-[180px] mob:right-4">
                 <Image src={topBtn} alt="위로가기 버튼" width={52} height={52} />
