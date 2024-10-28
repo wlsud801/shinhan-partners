@@ -11,10 +11,47 @@ import emoji4 from '../../../public/emoji4.png';
 import emoji5 from '../../../public/emoji5.png';
 import emoji6 from '../../../public/emoji6.png';
 import Image from 'next/image';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 function Section3() {
     const [dragging, setDragging] = useState<boolean>(false);
+    const videoRef = useRef<HTMLIFrameElement | null>(null);
+
+    useEffect(() => {
+        // Intersection Observer 설정
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    // 뷰포트에 들어오면 재생 (contentWindow가 있는 경우에만)
+                    if (videoRef.current && videoRef.current.contentWindow) {
+                        videoRef.current.contentWindow.postMessage(
+                            '{"event":"command","func":"playVideo","args":""}',
+                            '*'
+                        );
+                    }
+                } else {
+                    // 뷰포트를 벗어나면 일시 정지 (contentWindow가 있는 경우에만)
+                    if (videoRef.current && videoRef.current.contentWindow) {
+                        videoRef.current.contentWindow.postMessage(
+                            '{"event":"command","func":"pauseVideo","args":""}',
+                            '*'
+                        );
+                    }
+                }
+            },
+            { threshold: 0.5 } // 50% 이상 보일 때 트리거
+        );
+
+        if (videoRef.current) {
+            observer.observe(videoRef.current);
+        }
+
+        return () => {
+            if (videoRef.current) {
+                observer.unobserve(videoRef.current);
+            }
+        };
+    }, []);
 
     const handleBeforeChange = useCallback(() => {
         setDragging(true);
@@ -45,16 +82,16 @@ function Section3() {
                 유튜브 내용 작성 예정
             </p>
             <div
-                className="bg-bl200 h-[800px] text-center mx-5"
+                className="relative w-[calc(100%-40px)] px-4 pb-[177.78%] bg-bl200 mx-5"
                 data-aos="fade-up"
                 data-aos-easing="ease-out-cubic"
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="350"
             >
                 <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/esBQhXy796o"
+                    ref={videoRef}
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/esBQhXy796o?rel=0&autoplay=1"
                     title="신한 파트너스 & 매니저 '야 너두 할 수 있어'"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
@@ -62,6 +99,7 @@ function Section3() {
                     style={{ border: 'none' }}
                 ></iframe>
             </div>
+
             <div
                 data-aos="fade-up"
                 data-aos-easing="ease-out-cubic"
