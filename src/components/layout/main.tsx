@@ -45,7 +45,7 @@ function Main() {
             <Section11 />
             <Section12 />
             <Section13 ref={ref} />
-            <div
+{/*             <div
                 onClick={() => router.push('/form')}
                 className={`${
                     inView === true ? 'hidden' : 'block'
@@ -53,7 +53,7 @@ function Main() {
                 style={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}
             >
                 <b>바로 지원하기</b>
-            </div>
+            </div> */}
             <Link href={'#top'} className="fixed bottom-24 pc:left-1/2 pc:translate-x-[180px] mob:right-4">
                 <Image src={topBtn} alt="위로가기 버튼" width={52} height={52} />
             </Link>
