@@ -13,7 +13,7 @@ const Section13 = forwardRef<HTMLDivElement, {}>(function Section13(props, ref) 
             <h2>
                 <span>신한 파트너스</span>에<br /> 합류해 볼까요?
             </h2>
-            <div
+{/*             <div
                 onClick={() => router.push('/form')}
                 className={`w-[90%] py-4 rounded-xl max-w-[423px] mx-auto bg-black mt-4 text-white text-center cursor-pointer`}
                 data-aos="fade-in"
@@ -22,7 +22,7 @@ const Section13 = forwardRef<HTMLDivElement, {}>(function Section13(props, ref) 
                 data-aos-duration="500"
             >
                 바로 지원하기
-            </div>
+            </div> */}
             <Image src={join} alt="산" />
         </div>
     );
